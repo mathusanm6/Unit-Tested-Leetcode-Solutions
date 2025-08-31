@@ -1,0 +1,17 @@
+problem:
+  number: 217
+  title: "Contains Duplicate"
+  leetcode_url: "https://leetcode.com/problems/contains-duplicate/description/"
+  difficulty: "easy"
+  tags: ["Arrays & Hashing"]
+
+solutions:
+  python: "problems/contains_duplicate/contains_duplicate.py"
+  cpp: "problems/contains_duplicate/contains_duplicate.cc"
+
+complexity:
+  time: "O(n)"
+  space: "O(n)"
+
+notes: ""
+readme_link: ""
