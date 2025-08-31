@@ -16,7 +16,7 @@
 
 [![Last Commit](https://img.shields.io/github/last-commit/mathusanm6/LeetCode?style=for-the-badge&logo=git&logoColor=white&color=blue)](https://github.com/mathusanm6/LeetCode/commits/main)
 [![C++ Solutions](https://img.shields.io/badge/C%2B%2B%20Solutions-3-blue?style=for-the-badge&logo=cplusplus&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
-[![Python Solutions](https://img.shields.io/badge/Python%20Solutions-3-green?style=for-the-badge&logo=python&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
+[![Python Solutions](https://img.shields.io/badge/Python%20Solutions-3-blue?style=for-the-badge&logo=python&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
 
 </div>
 
