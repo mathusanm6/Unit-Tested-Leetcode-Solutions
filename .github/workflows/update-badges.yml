@@ -42,8 +42,8 @@ jobs:
           git add README.md
           git commit -m "docs: update problem count badges [skip ci]"
 
-          # Get the current branch name from the GitHub context
-          BRANCH_NAME="${{ github.head_ref || github.ref_name }}"
+          # Get the correct branch name for pushing
+          BRANCH_NAME="${{ github.event_name == 'pull_request' && github.base_ref || github.ref_name }}"
           echo "Pushing to branch: $BRANCH_NAME"
 
           # Push to the correct branch
