@@ -2,7 +2,7 @@
 name: Update Badges
 
 on: # yamllint disable-line rule:truthy
-  push:
+  pull_request:
     branches: ["main"]
   workflow_dispatch: # Allow manual triggering
 
