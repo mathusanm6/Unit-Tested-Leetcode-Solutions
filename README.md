@@ -1,86 +1,164 @@
-# 🧮 LeetCode Solutions
+# Unit-Tested LeetCode Solutions
 
 <div align="center">
 
 ### 🔬 Code Health & Testing
 
-[![C++ Tests](https://img.shields.io/github/actions/workflow/status/mathusanm6/LeetCode/code-health-cpp.yml?branch=main&label=C%2B%2B%20Tests&logo=cplusplus&logoColor=white&style=for-the-badge)](https://github.com/mathusanm6/LeetCode/actions/workflows/code-health-cpp.yml)
-[![Python Tests](https://img.shields.io/github/actions/workflow/status/mathusanm6/LeetCode/code-health-python.yml?branch=main&label=Python%20Tests&logo=python&logoColor=white&style=for-the-badge)](https://github.com/mathusanm6/LeetCode/actions/workflows/code-health-python.yml)
+[![C++ Tests](https://img.shields.io/github/actions/workflow/status/mathusanm6/LeetCode/code-health-cpp.yml?branch=main&label=C%2B%2B%20Tests&logo=cplusplus&logoColor=white&style=for-the-badge&successColor=green&failureColor=red)](https://github.com/mathusanm6/LeetCode/actions/workflows/code-health-cpp.yml)
+[![Python Tests](https://img.shields.io/github/actions/workflow/status/mathusanm6/LeetCode/code-health-python.yml?branch=main&label=Python%20Tests&logo=python&logoColor=white&style=for-the-badge&successColor=green&failureColor=red)](https://github.com/mathusanm6/LeetCode/actions/workflows/code-health-python.yml)
 
 ### 🔍 Code Quality & Linting
 
-[![C++ Linter](https://img.shields.io/github/actions/workflow/status/mathusanm6/LeetCode/linter-cpp.yml?branch=main&label=C%2B%2B%20Linter&logo=cplusplus&logoColor=white&style=for-the-badge&color=blue)](https://github.com/mathusanm6/LeetCode/actions/workflows/linter-cpp.yml)
-[![Python Linter](https://img.shields.io/github/actions/workflow/status/mathusanm6/LeetCode/linter-python.yml?branch=main&label=Python%20Linter&logo=python&logoColor=white&style=for-the-badge&color=blue)](https://github.com/mathusanm6/LeetCode/actions/workflows/linter-python.yml)
+[![C++ Linter](https://img.shields.io/github/actions/workflow/status/mathusanm6/LeetCode/linter-cpp.yml?branch=main&label=C%2B%2B%20Linter&logo=cplusplus&logoColor=white&style=for-the-badge&successColor=green&failureColor=red)](https://github.com/mathusanm6/LeetCode/actions/workflows/linter-cpp.yml)
+[![Python Linter](https://img.shields.io/github/actions/workflow/status/mathusanm6/LeetCode/linter-python.yml?branch=main&label=Python%20Linter&logo=python&logoColor=white&style=for-the-badge&successColor=green&failureColor=red)](https://github.com/mathusanm6/LeetCode/actions/workflows/linter-python.yml)
 
 ### 📊 Repository Stats
 
-[![Last Commit](https://img.shields.io/github/last-commit/mathusanm6/LeetCode?style=for-the-badge&logo=git&logoColor=white)](https://github.com/mathusanm6/LeetCode/commits/main)
+[![Last Commit](https://img.shields.io/github/last-commit/mathusanm6/LeetCode?style=for-the-badge&logo=git&logoColor=white&color=blue)](https://github.com/mathusanm6/LeetCode/commits/main)
 [![C++ Solutions](https://img.shields.io/badge/C%2B%2B%20Solutions-3-blue?style=for-the-badge&logo=cplusplus&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
-[![Python Solutions](https://img.shields.io/badge/Python%20Solutions-3-green?style=for-the-badge&logo=python&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
+[![Python Solutions](https://img.shields.io/badge/Python%20Solutions-3-blue?style=for-the-badge&logo=python&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
 
 </div>
 
 ## Description
 
-This repository contains my solutions to LeetCode problems. I will be updating this repository with my solutions as I solve more problems. I have included a test suite for each solution.
+This repository contains comprehensive, unit-tested solutions to LeetCode problems implemented in both **C++20** and **Python 3**. Each solution includes:
+
+- 🧪 **Comprehensive test suites** with multiple test cases
+- 📝 **Detailed documentation** with complexity analysis
+- 🔧 **Automated code quality** checks and formatting
+- 🚀 **CI/CD pipeline** with automated testing and linting
+
+## 📁 Project Structure
+
+```
+├── problems/                    # Problem solutions organized by name
+│   ├── two_sum/                 # Individual problem directories
+│   │   ├── config.yml           # Problem metadata and configuration
+│   │   ├── two_sum.py           # Python solution
+│   │   ├── two_sum.cc           # C++ solution
+│   │   ├── two_sum.h            # C++ header
+│   │   ├── two_sum_test.py      # Python unit tests
+│   │   └── two_sum_test.cc      # C++ unit tests
+│   └── ...
+├── config/                      # Global configuration files
+│   ├── difficulties.yml         # Difficulty level definitions
+│   └── tags.yml                 # Problem tag categories
+├── scripts/                     # Automation and utility scripts
+│   ├── generate_readme.py       # Auto-generate README content
+│   ├── update_badges.py         # Update repository badges
+│   └── update_badges.sh         # Badge update automation
+├── .github/workflows/           # CI/CD automation
+│   ├── code-health-*.yml        # Comprehensive testing workflows
+│   ├── linter-*.yml             # Code quality workflows
+│   ├── presubmit-*.yml          # Pre-merge validation
+│   └── update-badges.yml        # Automated badge updates
+├── Makefile                     # Build and test automation
+├── requirements.txt             # Python dependencies
+├── .clang-format                # C++ code formatting rules
+└── .clang-tidy                  # C++ linting configuration
+```
+
+## 🛠️ Technologies & Tools
+
+### Languages & Standards
+
+- **C++**: C++20 with modern features and best practices
+- **Python**: Python 3.x with type hints and modern syntax
+
+### Testing Frameworks
+
+- **C++**: Google Test (gtest) for comprehensive unit testing
+- **Python**: pytest with coverage reporting
+
+### Code Quality Tools
+
+- **C++ Formatting**: clang-format for consistent code style
+- **C++ Linting**: clang-tidy for static analysis and best practices
+- **Python Formatting**: ruff for fast, comprehensive code formatting
+- **Python Linting**: ruff for linting, import sorting, and code quality
+
+### Build & Automation
+
+- **Make**: Cross-platform build system with intelligent target detection
+- **GitHub Actions**: Automated CI/CD with parallel testing and validation
 
 ## Running Tests
 
-### Python Tests
+The project includes comprehensive test suites for all solutions with cross-platform support.
 
-To run the Python test suite, use the following commands in **the repository directory**:
+### 🐍 Python Tests
 
 ```bash
-# Run all Python tests
+# Run all Python tests with coverage
 make test-py:all
 
 # Run tests for a specific problem (e.g., two-sum)
 make test-py:two-sum
 ```
 
-### C++ Tests
-
-To run the C++ test suite, use the following commands in the repository directory:
+### ⚡ C++ Tests
 
 ```bash
-# Run all C++ tests
+# Run all C++ tests (auto-detects macOS/Linux)
 make test-cpp:all
 
 # Run tests for a specific problem (e.g., two-sum)
 make test-cpp:two-sum
 
-# Run both C++ and Python tests for all problems
+# Run all tests (both languages)
 make test:all
 ```
 
+**Requirements:**
+
+- **macOS**: `brew install googletest`
+- **Linux**: `sudo apt-get install libgtest-dev` or build from source
+
 ## Code Quality
 
-This project includes comprehensive code quality tools and automated linting:
+This project maintains high code quality standards through automated tooling and CI/CD integration.
 
-### Linting and Formatting
+### 🎨 Formatting & Linting
 
 ```bash
-# Format all code (C++ and Python)
+# Format all code (C++ with clang-format, Python with ruff)
 make format
 
-# Lint all code (C++ and Python)
+# Lint all code with comprehensive checks
 make lint
 
-# Format/lint specific languages
+# Language-specific operations
 make format-cpp     # Format C++ files with clang-format
 make format-python  # Format Python files with ruff
 make lint-cpp       # Lint C++ files with clang-tidy
 make lint-python    # Lint Python files with ruff
 ```
 
-### Continuous Integration
+### 🔄 Continuous Integration
 
-- **Linters**: Automated code formatting and linting checks on every push/PR
-- **Presubmit**: Comprehensive testing of changed files before merge
-- **Postsubmit**: Full test suite execution after merge to main branch
-- All workflows leverage the project's Makefile for consistency
+The project includes a comprehensive CI/CD pipeline:
 
-## Algorithms
+- **🔍 Presubmit Checks**: Validate code changes before merge
+  - Format validation (clang-format, ruff)
+  - Linting checks (clang-tidy, ruff)
+  - Unit test execution for changed files
+- **🧪 Code Health**: Full validation after merge to main
+
+  - Complete test suite execution
+  - Cross-platform compatibility testing
+  - Coverage reporting
+
+- **📊 Automated Maintenance**:
+  - Badge updates reflecting current status
+  - PR size labeling for review optimization
+  - Workflow status monitoring
+
+All workflows leverage the project's Makefile for consistency across local development and CI environments.
+
+## 🧮 Algorithms & Data Structures
+
+This repository covers a comprehensive range of algorithmic patterns and data structures commonly found in technical interviews:
 
 - [Arrays & Hashing](#arrays--hashing)
 - [Two Pointers](#two-pointers)
@@ -111,7 +189,3 @@ make lint-python    # Lint Python files with ruff
 | # | Title | Solution | Time | Space | Difficulty | Tag | Note |
 |---|-------|----------|------|-------|------------|-----|------|
 | 125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | [Python](./problems/valid_palindrome/valid_palindrome.py), [C++](./problems/valid_palindrome/valid_palindrome.cc) | _O(n)_ | _O(1)_ | Easy |  |  |
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.

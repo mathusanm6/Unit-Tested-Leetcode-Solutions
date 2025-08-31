@@ -218,11 +218,16 @@ class ReadmeGenerator:
         problems_table = self.generate_problems_table()
 
         # Find the algorithms section
-        start_marker = "## Algorithms"
+        start_marker = "## 🧮 Algorithms & Data Structures"
 
         start_idx = content.find(start_marker)
+
         if start_idx == -1:
-            print(Colors.red("✗ Could not find 'Algorithms' section in README"))
+            print(
+                Colors.red(
+                    "✗ Could not find '🧮 Algorithms & Data Structures' section in README"
+                )
+            )
             return
 
         # Look for the end of the algorithms content
@@ -266,7 +271,7 @@ class ReadmeGenerator:
         content_after = content[end_idx:] if end_idx < len(content) else ""
 
         # Replace only the algorithms section
-        new_algorithms_section = f"## Algorithms\n\n{toc}\n\n{problems_table}"
+        new_algorithms_section = f"## 🧮 Algorithms & Data Structures\n\nThis repository covers a comprehensive range of algorithmic patterns and data structures commonly found in technical interviews:\n\n{toc}\n\n{problems_table}"
 
         new_content = content[:start_idx] + new_algorithms_section + content_after
 
