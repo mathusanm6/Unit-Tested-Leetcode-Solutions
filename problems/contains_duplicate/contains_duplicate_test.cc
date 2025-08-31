@@ -1,6 +1,7 @@
 #include "contains_duplicate.h"
 
 #include <gtest/gtest.h>
+#include <climits>
 #include <string>
 #include <vector>
 
@@ -51,7 +52,10 @@ INSTANTIATE_TEST_SUITE_P(
                               .nums =
                                   []() {
                                       std::vector<int> v;
-                                      for (int i = 0; i < 100; ++i) v.push_back(i);
+                                      v.reserve(100);
+                                      for (int i = 0; i < 100; ++i) {
+                                          v.push_back(i);
+                                      }
                                       return v;
                                   }(),
                               .expected = false},
@@ -67,7 +71,10 @@ INSTANTIATE_TEST_SUITE_P(
                               .nums =
                                   []() {
                                       std::vector<int> v;
-                                      for (int i = 0; i < 5000; ++i) v.push_back(i);
+                                      v.reserve(5001);
+                                      for (int i = 0; i < 5000; ++i) {
+                                          v.push_back(i);
+                                      }
                                       v.push_back(2500);  // Introduce a single duplicate
                                       return v;
                                   }(),
