@@ -6,7 +6,7 @@
 bool containsDuplicate(std::vector<int>& nums) {
     std::unordered_set<int> seen;
     seen.reserve(nums.size());
-    for (int& num : nums) {
+    for (const int& num : nums) {
         if (auto iter = seen.find(num); iter != seen.end()) {
             return true;
         }
