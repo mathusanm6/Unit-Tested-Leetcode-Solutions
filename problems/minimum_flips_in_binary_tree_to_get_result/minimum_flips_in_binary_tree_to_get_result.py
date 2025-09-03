@@ -39,7 +39,12 @@ def minimumFlips(root: Optional[TreeNode], result: bool) -> int:
                 min(left_false + right_true, left_true + right_false),
             )
         elif x == 5:  # NOT
-            return (left_true, left_false)
+            if node.left and not node.right:
+                return left_true, left_false
+            elif not node.left and node.right:
+                return right_true, right_false
+            else:
+                return inf, inf  # Invalid operation
         else:
             raise ValueError(f"Unknown operation: {x}")
 

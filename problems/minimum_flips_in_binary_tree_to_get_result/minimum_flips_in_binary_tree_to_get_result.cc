@@ -30,7 +30,13 @@ int minimumFlips(TreeNode* root, bool result) {
             return {min({left_false + right_false, left_true + right_true}),
                     min({left_true + right_false, left_false + right_true})};
         } else if (x == 5) {  // NOT
-            return {left_true, left_false};
+            if (node->left && !node->right) {
+                return {left_true, left_false};
+            } else if (!node->left && node->right) {
+                return {right_true, right_false};
+            } else {
+                return {1 << 30, 1 << 30};  // Invalid operation
+            }
         } else {
             return {1 << 30, 1 << 30};  // Invalid operation
         }

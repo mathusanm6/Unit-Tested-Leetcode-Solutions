@@ -62,6 +62,17 @@ from minimum_flips_in_binary_tree_to_get_result import minimumFlips  # noqa: E40
             False,
             1,
         ),  # Complex tree: XOR(OR(1,1), AND(1,0)) = 1, flip one child to make it 0
+        (
+            TreeNode(
+                4,
+                TreeNode(0),
+                TreeNode(
+                    2, TreeNode(0), TreeNode(5, None, TreeNode(5, None, TreeNode(1)))
+                ),
+            ),
+            True,
+            0,
+        ),  # Complex tree: XOR(0, OR(0, NOT(NOT(1)))) = 1, already true
     ],
     ids=[
         "leaf_0_to_true",
@@ -78,6 +89,7 @@ from minimum_flips_in_binary_tree_to_get_result import minimumFlips  # noqa: E40
         "complex_tree_and_already_false",
         "complex_tree_xor_need_flip",
         "complex_tree_xor_to_false",
+        "complex_xor_tree_with_not_right_child",
     ],
 )
 def test_minimum_flips(root, result, expected):
