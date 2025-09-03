@@ -1,7 +1,7 @@
 problem:
   number: 217
   title: "Contains Duplicate"
-  leetcode_url: "https://leetcode.com/problems/contains-duplicate/description/"
+  leetcode_url: "https://leetcode.com/problems/contains-duplicate/"
   difficulty: "easy"
   tags: ["Arrays & Hashing"]
 
