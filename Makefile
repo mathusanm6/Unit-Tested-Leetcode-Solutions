@@ -330,6 +330,25 @@ debug-gtest:
 	fi
 
 # =============================================================================
+# Git Hooks
+# =============================================================================
+
+# Install Git hooks
+.PHONY: install-hooks
+install-hooks: ## Install Git hooks for code quality
+	@echo "Installing Git hooks..."
+	@cp hooks/pre-commit .git/hooks/pre-commit
+	@chmod +x .git/hooks/pre-commit
+	@echo "$(call color_green,Git hooks installed successfully.)"
+
+# Uninstall Git hooks
+.PHONY: uninstall-hooks
+uninstall-hooks: ## Uninstall Git hooks
+	@echo "Uninstalling Git hooks..."
+	@rm -f .git/hooks/pre-commit
+	@echo "$(call color_green,Git hooks uninstalled.)"
+
+# =============================================================================
 # Help and Documentation
 # =============================================================================
 
@@ -357,6 +376,8 @@ help:
 	@echo "  readme             		- Generate README from problem configurations"
 	@echo "  readme-check       		- Check if README is up to date"
 	@echo "  update-badges      		- Update README badges with current problem counts"
+	@echo "  install-hooks      		- Install Git hooks for code quality"
+	@echo "  uninstall-hooks    		- Uninstall Git hooks"
 	@echo "  debug-gtest        		- Debug Google Test configuration"
 	@echo "  help               		- Show this help message"
 	@echo ""

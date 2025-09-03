@@ -1,7 +1,7 @@
 problem:
   number: 2313
   title: "Minimum Flips in Binary Tree to Get Result"
-  leetcode_url: "https://leetcode.com/problems/minimum-flips-in-binary-tree-to-get-result/description/"
+  leetcode_url: "https://leetcode.com/problems/minimum-flips-in-binary-tree-to-get-result/"
   difficulty: "hard"
   tags: ["Trees"]
 
