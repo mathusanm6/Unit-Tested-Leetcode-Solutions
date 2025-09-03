@@ -95,5 +95,13 @@ INSTANTIATE_TEST_SUITE_P(
         MinimumFlipsCase{.test_name = "NotGateFlipToFalse",
                          .root = new TreeNode(5, new TreeNode(0), nullptr),
                          .result = false,
-                         .expected = 1}),
+                         .expected = 1},
+        MinimumFlipsCase{
+            .test_name = "ComplexXorTreeWithNotRightChild",
+            .root = new TreeNode(
+                4, new TreeNode(0),
+                new TreeNode(2, new TreeNode(0),
+                             new TreeNode(5, nullptr, new TreeNode(5, nullptr, new TreeNode(1))))),
+            .result = true,
+            .expected = 0}),
     [](const ::testing::TestParamInfo<MinimumFlipsCase> &info) { return info.param.test_name; });
