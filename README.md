@@ -164,18 +164,20 @@ This repository covers a comprehensive range of algorithmic patterns and data st
 - [Two Pointers](#two-pointers)
 - [Sliding Window](#sliding-window)
 - [Stack](#stack)
-- [Matrix](#matrix)
-- [Intervals](#intervals)
+- [Binary Search](#binary-search)
 - [Linked List](#linked-list)
-- [Binary Tree General](#binary-tree-general)
-- [Binary Tree BFS](#binary-tree-bfs)
-- [Binary Search Tree](#binary-search-tree)
-- [Graph General](#graph-general)
-- [Dynamic Programming](#dynamic-programming)
+- [Trees](#trees)
+- [Heap / Priority Queue](#heap-/-priority-queue)
 - [Backtracking](#backtracking)
-- [Heap](#heap)
+- [Tries](#tries)
+- [Graphs](#graphs)
+- [Advanced Graphs](#advanced-graphs)
+- [1-D Dynamic Programming](#1-d-dynamic-programming)
+- [2-D Dynamic Programming](#2-d-dynamic-programming)
 - [Greedy](#greedy)
-- [Trie](#trie)
+- [Intervals](#intervals)
+- [Math & Geometry](#math--geometry)
+- [Bit Manipulation](#bit-manipulation)
 
 ## Arrays & Hashing
 
@@ -189,3 +191,9 @@ This repository covers a comprehensive range of algorithmic patterns and data st
 | # | Title | Solution | Time | Space | Difficulty | Tag | Note |
 |---|-------|----------|------|-------|------------|-----|------|
 | 125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | [Python](./problems/valid_palindrome/valid_palindrome.py), [C++](./problems/valid_palindrome/valid_palindrome.cc) | _O(n)_ | _O(1)_ | Easy |  |  |
+
+## Trees
+
+| # | Title | Solution | Time | Space | Difficulty | Tag | Note |
+|---|-------|----------|------|-------|------------|-----|------|
+| 2313 | [Minimum Flips in Binary Tree to Get Result](https://leetcode.com/problems/minimum-flips-in-binary-tree-to-get-result/description/) | [Python](./problems/minimum_flips_in_binary_tree_to_get_result/minimum_flips_in_binary_tree_to_get_result.py), [C++](./problems/minimum_flips_in_binary_tree_to_get_result/minimum_flips_in_binary_tree_to_get_result.cc) | _O(n)_ | _O(1)_ | Hard |  | _n_ is the number of nodes in the binary tree. |
