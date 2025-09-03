@@ -1,0 +1,17 @@
+problem:
+  number: 2313
+  title: "Minimum Flips in Binary Tree to Get Result"
+  leetcode_url: "https://leetcode.com/problems/minimum-flips-in-binary-tree-to-get-result/description/"
+  difficulty: "hard"
+  tags: ["Trees"]
+
+solutions:
+  python: "problems/minimum_flips_in_binary_tree_to_get_result/minimum_flips_in_binary_tree_to_get_result.py"
+  cpp: "problems/minimum_flips_in_binary_tree_to_get_result/minimum_flips_in_binary_tree_to_get_result.cc"
+
+complexity:
+  time: "O(n)"
+  space: "O(1)"
+
+notes: "_n_ is the number of nodes in the binary tree."
+readme_link: ""
