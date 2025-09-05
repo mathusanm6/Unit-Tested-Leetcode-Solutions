@@ -2,7 +2,7 @@ problem:
   number: 49
   title: "Group Anagrams"
   leetcode_url: "https://leetcode.com/problems/group-anagrams/"
-  difficulty: "Medium"
+  difficulty: "medium"
   tags: ["Arrays & Hashing"]
 
 solutions:

@@ -184,6 +184,7 @@ This repository covers a comprehensive range of algorithmic patterns and data st
 | # | Title | Solution | Time | Space | Difficulty | Tag | Note |
 |---|-------|----------|------|-------|------------|-----|------|
 | 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | [Python](./problems/two_sum/two_sum.py), [C++](./problems/two_sum/two_sum.cc) | _O(n)_ | _O(n)_ | Easy |  |  |
+| 49 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) | [Python](./problems/group_anagrams/group_anagrams.py), [C++](./problems/group_anagrams/group_anagrams.cpp) | _O(n * k log k)_ | _O(n)_ | Medium |  | For C++, the complexity is _O(n * k log k)_, where n is the number of strings and k is the maximum length of a string. But for Python, the complexity is _O(n * k)_ as there is no sorting involved. |
 | 217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | [Python](./problems/contains_duplicate/contains_duplicate.py), [C++](./problems/contains_duplicate/contains_duplicate.cc) | _O(n)_ | _O(n)_ | Easy |  |  |
 
 ## Two Pointers
