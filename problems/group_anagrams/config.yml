@@ -1,0 +1,17 @@
+problem:
+  number: 49
+  title: "Group Anagrams"
+  leetcode_url: "https://leetcode.com/problems/group-anagrams/"
+  difficulty: "medium"
+  tags: ["Arrays & Hashing"]
+
+solutions:
+  python: "problems/group_anagrams/group_anagrams.py"
+  cpp: "problems/group_anagrams/group_anagrams.cc"
+
+complexity:
+  time: "O(n * k log k)"
+  space: "O(n)"
+
+notes: "For C++, the complexity is _O(n * k log k)_, where n is the number of strings and k is the maximum length of a string. But for Python, the complexity is _O(n * k)_ as there is no sorting involved."
+readme_link: ""
