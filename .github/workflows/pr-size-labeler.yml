@@ -133,7 +133,7 @@ jobs:
               });
               
               const hasExistingComment = comments.some(comment => 
-                comment.user.type === 'Bot' && comment.body.includes('This PR is very large')
+                comment.user.login && comment.user.login.endsWith('[bot]') && comment.body.includes('This PR is very large')
               );
               
               if (!hasExistingComment) {
