@@ -28,14 +28,14 @@ jobs:
 
       - name: Lint Python code using Makefile
         run: |
-          make lint-python
+          make lint-py
 
       - name: Format check Python code using Makefile
         run: |
-          make format-python
+          make format-py
           # Check if any files were modified by formatting
           if ! git diff --exit-code; then
             echo "Code formatting issues found. Please run 'make \
-            format-python' locally."
+            format-py' locally."
             exit 1
           fi

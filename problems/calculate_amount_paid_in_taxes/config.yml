@@ -1,0 +1,17 @@
+problem:
+  number: 2303
+  title: "Calculate Amount Paid In Taxes"
+  leetcode_url: "https://leetcode.com/problems/calculate-amount-paid-in-taxes/"
+  difficulty: "easy"
+  tags: [Arrays & Hashing]
+
+solutions:
+  python: "problems/calculate_amount_paid_in_taxes/calculate_amount_paid_in_taxes.py"
+  cpp: "problems/calculate_amount_paid_in_taxes/calculate_amount_paid_in_taxes.cc"
+
+complexity:
+  time: "O(n)"
+  space: "O(1)"
+
+notes: ""
+readme_link: ""

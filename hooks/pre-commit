@@ -179,7 +179,7 @@ if [ "$HAS_PYTHON_FILES" = true ] || [ "$HAS_CPP_FILES" = true ]; then
     LINT_SUCCESS=true
     if [ "$HAS_PYTHON_FILES" = true ]; then
         print_status "Linting Python files..."
-        if ! make lint-python; then
+        if ! make lint-py; then
             LINT_SUCCESS=false
         fi
     fi
