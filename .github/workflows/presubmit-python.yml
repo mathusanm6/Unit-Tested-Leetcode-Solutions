@@ -92,7 +92,7 @@ jobs:
 
       - name: Lint Python code
         if: steps.detect-changes.outputs.has_python_changes == 'true'
-        run: make lint-python
+        run: make lint-py
 
       - name: Run Python tests for changed problems
         if: >

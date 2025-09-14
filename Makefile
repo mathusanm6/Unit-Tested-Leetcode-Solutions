@@ -173,7 +173,7 @@ test-py\:%:
 format:
 	@make format-cpp
 	@echo ""
-	@make format-python
+	@make format-py
 
 .PHONY: format-cpp
 format-cpp:
@@ -185,8 +185,8 @@ format-cpp:
 		echo "$(call color_red,clang-format not found. Please install it to format C++ files.)"; \
 	fi
 
-.PHONY: format-python
-format-python:
+.PHONY: format-py
+format-py:
 	@echo "Formatting Python files..."
 	@if command -v ruff >/dev/null; then \
 		ruff format $(PROBLEMS_DIR); \
@@ -202,7 +202,7 @@ format-python:
 lint:
 	@make lint-cpp
 	@echo ""
-	@make lint-python
+	@make lint-py
 
 .PHONY: lint-cpp
 lint-cpp:
@@ -216,8 +216,8 @@ lint-cpp:
 		echo "$(call color_red,clang-tidy not found. Please install it to lint C++ files.)"; \
 	fi
 
-.PHONY: lint-python
-lint-python:
+.PHONY: lint-py
+lint-py:
 	@echo "Linting Python files..."
 	@if command -v ruff >/dev/null; then \
 		ruff check $(PROBLEMS_DIR); \
@@ -365,10 +365,10 @@ help:
 	@echo "$(call color_yellow,Code Quality Targets:)"
 	@echo "  format             		- Format all code (C++ and Python)"
 	@echo "  format-cpp         		- Format C++ code only"
-	@echo "  format-python      		- Format Python code only"
+	@echo "  format-py          		- Format Python code only"
 	@echo "  lint               		- Lint all code (C++ and Python)"
 	@echo "  lint-cpp           		- Lint C++ code only"
-	@echo "  lint-python        		- Lint Python code only"
+	@echo "  lint-py            		- Lint Python code only"
 	@echo ""
 	@echo "$(call color_yellow,Utility Targets:)"
 	@echo "  clean              		- Clean build artifacts"

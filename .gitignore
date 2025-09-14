@@ -171,3 +171,6 @@ build/
 # Test Runner
 test_runner
 test_runner.dSYM/
+
+# Problem generation script (not tracked)
+generate_problem.py
