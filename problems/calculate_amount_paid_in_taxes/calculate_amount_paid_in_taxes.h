@@ -1,3 +1,3 @@
 #include <vector>
 
-double calculateAmountPaidInTaxes(std::vector<std::vector<int>>& brackets, const int income);
+double calculateAmountPaidInTaxes(const std::vector<std::vector<int>>& brackets, const int income);

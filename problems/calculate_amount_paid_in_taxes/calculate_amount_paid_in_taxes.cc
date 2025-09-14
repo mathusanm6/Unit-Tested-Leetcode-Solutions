@@ -6,7 +6,7 @@
 using std::min;
 using std::vector;
 
-double calculateAmountPaidInTaxes(vector<vector<int>>& brackets, const int income) {
+double calculateAmountPaidInTaxes(const vector<vector<int>>& brackets, const int income) {
     double totalTax = 0.0;
 
     int incomeRemaining = income;

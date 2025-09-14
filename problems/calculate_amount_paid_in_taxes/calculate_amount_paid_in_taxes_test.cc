@@ -6,9 +6,9 @@
 
 struct CalculateAmountPaidInTaxesCase {
     std::string test_name;
-    std::vector<std::vector<int>> brackets;
-    int income;
-    double expected;
+    const std::vector<std::vector<int>> brackets;
+    const int income;
+    const double expected;
 };
 
 using CalculateAmountPaidInTaxesTest = ::testing::TestWithParam<CalculateAmountPaidInTaxesCase>;
