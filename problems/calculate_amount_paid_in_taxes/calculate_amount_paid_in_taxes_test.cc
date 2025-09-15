@@ -14,7 +14,7 @@ struct CalculateAmountPaidInTaxesCase {
 using CalculateAmountPaidInTaxesTest = ::testing::TestWithParam<CalculateAmountPaidInTaxesCase>;
 
 TEST_P(CalculateAmountPaidInTaxesTest, TestCases) {
-    CalculateAmountPaidInTaxesCase testCase = GetParam();
+    const CalculateAmountPaidInTaxesCase& testCase = GetParam();
     const auto result = calculateAmountPaidInTaxes(testCase.brackets, testCase.income);
     EXPECT_EQ(result, testCase.expected);
 }
@@ -33,6 +33,6 @@ INSTANTIATE_TEST_SUITE_P(
                                                      .brackets = {{2, 50}},
                                                      .income = 0,
                                                      .expected = 0.00000}),
-    [](const testing::TestParamInfo<CalculateAmountPaidInTaxesCase> &info) {
+    [](const testing::TestParamInfo<CalculateAmountPaidInTaxesCase>& info) {
         return info.param.test_name;
     });

@@ -1,0 +1,17 @@
+problem:
+  number: 1087
+  title: "Brace Expansion"
+  leetcode_url: "https://leetcode.com/problems/brace-expansion/"
+  difficulty: "medium"
+  tags: ["Backtracking"]
+
+solutions:
+  python: "problems/brace_expansion/brace_expansion.py"
+  cpp: "problems/brace_expansion/brace_expansion.cc"
+
+complexity:
+  time: "O(M^K + M log M)"
+  space: "O(M^K)"
+
+notes: "M = max choices per brace set, K = number of brace sets. M^K for generating combinations, M log M for sorting."
+readme_link: ""
