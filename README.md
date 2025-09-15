@@ -15,8 +15,8 @@
 ### 📊 Repository Stats
 
 [![Last Commit](https://img.shields.io/github/last-commit/mathusanm6/LeetCode?style=for-the-badge&logo=git&logoColor=white&color=blue)](https://github.com/mathusanm6/LeetCode/commits/main)
-[![C++ Solutions](https://img.shields.io/badge/C%2B%2B%20Solutions-6-blue?style=for-the-badge&logo=cplusplus&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
-[![Python Solutions](https://img.shields.io/badge/Python%20Solutions-6-blue?style=for-the-badge&logo=python&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
+[![C++ Solutions](https://img.shields.io/badge/C%2B%2B%20Solutions-7-blue?style=for-the-badge&logo=cplusplus&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
+[![Python Solutions](https://img.shields.io/badge/Python%20Solutions-7-blue?style=for-the-badge&logo=python&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
 
 </div>
 
@@ -199,3 +199,9 @@ This repository covers a comprehensive range of algorithmic patterns and data st
 | # | Title | Solution | Time | Space | Difficulty | Tag | Note |
 |---|-------|----------|------|-------|------------|-----|------|
 | 2313 | [Minimum Flips in Binary Tree to Get Result](https://leetcode.com/problems/minimum-flips-in-binary-tree-to-get-result/) | [Python](./problems/minimum_flips_in_binary_tree_to_get_result/minimum_flips_in_binary_tree_to_get_result.py), [C++](./problems/minimum_flips_in_binary_tree_to_get_result/minimum_flips_in_binary_tree_to_get_result.cc) | _O(n)_ | _O(1)_ | Hard |  | _n_ is the number of nodes in the binary tree. |
+
+## Backtracking
+
+| # | Title | Solution | Time | Space | Difficulty | Tag | Note |
+|---|-------|----------|------|-------|------------|-----|------|
+| 1087 | [Brace Expansion](https://leetcode.com/problems/brace-expansion/) | [Python](./problems/brace_expansion/brace_expansion.py), [C++](./problems/brace_expansion/brace_expansion.cc) | _O(M^K + M log M)_ | _O(M^K)_ | Medium |  | M = max choices per brace set, K = number of brace sets. M^K for generating combinations, M log M for sorting. |
