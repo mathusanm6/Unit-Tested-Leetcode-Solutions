@@ -1,0 +1,17 @@
+problem:
+  number: 399
+  title: "Evaluate Division"
+  leetcode_url: "https://leetcode.com/problems/evaluate-division/"
+  difficulty: "medium"
+  tags: ["Graphs"]
+
+solutions:
+  python: "problems/evaluate_division/evaluate_division.py"
+  cpp: "problems/evaluate_division/evaluate_division.cc"
+
+complexity:
+  time: "O(N + M)"
+  space: "O(N)"
+
+notes: "N = number of equations, M = number of queries."
+readme_link: ""
