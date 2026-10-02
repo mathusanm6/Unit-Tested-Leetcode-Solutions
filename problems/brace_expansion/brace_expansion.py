@@ -1,12 +1,10 @@
 import re
 
-from typing import List
 
+def braceExpansion(s: str) -> list[str]:
+    results: list[str] = []
 
-def braceExpansion(s: str) -> List[str]:
-    results: List[str] = []
-
-    def backtrack(prefixes: List[str], remaining: str) -> None:
+    def backtrack(prefixes: list[str], remaining: str) -> None:
         """
         Recursive helper that expands the string.
 
@@ -37,7 +35,7 @@ def braceExpansion(s: str) -> List[str]:
 
         # If no prefixes yet, start from empty string
         base_prefixes = prefixes if prefixes else [""]
-        new_prefixes: List[str] = []
+        new_prefixes: list[str] = []
 
         # Build new partial expansions by combining each prefix with each choice
         for prefix in base_prefixes:

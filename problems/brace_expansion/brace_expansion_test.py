@@ -1,7 +1,6 @@
 """Test cases for the brace_expansion function."""
 
 import pytest
-
 from brace_expansion import braceExpansion
 
 

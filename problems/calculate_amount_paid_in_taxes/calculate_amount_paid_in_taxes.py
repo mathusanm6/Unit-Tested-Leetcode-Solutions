@@ -1,7 +1,4 @@
-from typing import List
-
-
-def calculateAmountPaidInTaxes(brackets: List[List[int]], income: int) -> float:
+def calculateAmountPaidInTaxes(brackets: list[list[int]], income: int) -> float:
     total_tax = 0.0
 
     income_remaining = income

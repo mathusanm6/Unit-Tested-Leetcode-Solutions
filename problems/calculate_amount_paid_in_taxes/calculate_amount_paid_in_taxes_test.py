@@ -1,7 +1,6 @@
 """Test cases for the calculate_amount_paid_in_taxes function."""
 
 import pytest
-
 from calculate_amount_paid_in_taxes import calculateAmountPaidInTaxes
 
 

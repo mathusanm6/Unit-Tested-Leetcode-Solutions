@@ -1,15 +1,18 @@
-#!/usr/bin/env python3
 """
 README Generator for LeetCode Solutions
 Generates the problems table from individual problem configuration files.
 """
 
-import os
-import yaml
 import argparse
-from pathlib import Path
-from typing import Dict, List, Any
+import logging
+import os
 from collections import defaultdict
+from pathlib import Path
+from typing import Any
+
+import yaml
+
+logger = logging.getLogger(__name__)
 
 
 class Colors:
@@ -49,7 +52,7 @@ class ReadmeGenerator:
         self.config_dir = self.root_dir / "config"
         self.problems_dir = self.root_dir / "problems"
 
-    def load_config(self, config_file: str) -> Dict[str, Any]:
+    def load_config(self, config_file: str) -> dict[str, Any]:
         """Load YAML configuration file."""
         config_path = self.config_dir / config_file
         if not config_path.exists():
@@ -58,7 +61,7 @@ class ReadmeGenerator:
         with open(config_path, "r") as f:
             return yaml.safe_load(f)
 
-    def find_problem_configs(self) -> List[Path]:
+    def find_problem_configs(self) -> list[Path]:
         """Find all problem configuration files."""
         config_files = []
         for root, dirs, files in os.walk(self.problems_dir):
@@ -66,12 +69,12 @@ class ReadmeGenerator:
                 config_files.append(Path(root) / "config.yml")
         return config_files
 
-    def load_problem_config(self, config_path: Path) -> Dict[str, Any]:
+    def load_problem_config(self, config_path: Path) -> dict[str, Any]:
         """Load a single problem configuration."""
         with open(config_path, "r") as f:
             return yaml.safe_load(f)
 
-    def validate_problem_config(self, config: Dict[str, Any]) -> bool:
+    def validate_problem_config(self, config: dict[str, Any]) -> bool:
         """Validate problem configuration against allowed values."""
         difficulties = self.load_config("difficulties.yml").get("difficulties", [])
         tags = self.load_config("tags.yml").get("tags", [])
@@ -104,7 +107,7 @@ class ReadmeGenerator:
         """Generate a markdown anchor from a tag name."""
         return tag.lower().replace(" ", "-").replace("&", "")
 
-    def format_solutions(self, solutions: Dict[str, str]) -> str:
+    def format_solutions(self, solutions: dict[str, str]) -> str:
         """Format solution links for the table."""
         formatted_solutions = []
         for lang, path in solutions.items():
@@ -138,7 +141,7 @@ class ReadmeGenerator:
                 problem = config["problem"]
                 for tag in problem.get("tags", ["Uncategorized"]):
                     problems_by_tag[tag].append(config)
-            except Exception as e:
+            except (OSError, yaml.YAMLError, KeyError, TypeError, ValueError) as e:
                 print(Colors.red(f"✗ Error loading {config_path}: {e}"))
                 continue
 
@@ -156,7 +159,6 @@ class ReadmeGenerator:
             )
 
             # Create section header
-            tag_anchor = self.generate_anchor(tag)
             markdown_sections.append(f"## {tag}")
             markdown_sections.append("")
 
@@ -287,8 +289,10 @@ class ReadmeGenerator:
                 config = self.load_problem_config(config_path)
                 if self.validate_problem_config(config):
                     valid_configs += 1
-            except (yaml.YAMLError, FileNotFoundError, Exception):
-                pass
+            except (yaml.YAMLError, FileNotFoundError) as exc:
+                logger.warning(
+                    "Skipping invalid problem configuration %s: %s", config_path, exc
+                )
 
         print(Colors.green("✓ README updated successfully!"))
         print(Colors.green(f"  Processed {valid_configs} valid problem configurations"))
@@ -308,7 +312,7 @@ def main():
         print(Colors.blue("=== LeetCode README Generator ==="))
         print(Colors.yellow(f"Root directory: {args.root}"))
         print(Colors.yellow(f"README file: {args.readme}"))
-        print("")
+        print()
 
     generator = ReadmeGenerator(args.root)
     generator.update_readme(args.readme)
