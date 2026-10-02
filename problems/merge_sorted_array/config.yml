@@ -1,0 +1,17 @@
+problem:
+  number: 88
+  title: "Merge Sorted Array"
+  leetcode_url: "https://leetcode.com/problems/merge-sorted-array/"
+  difficulty: "easy"
+  tags: ["Two Pointers"]
+
+solutions:
+  python: "problems/merge_sorted_array/merge_sorted_array.py"
+  cpp: "problems/merge_sorted_array/merge_sorted_array.cc"
+
+complexity:
+  time: "O(m + n)"
+  space: "O(1)"
+
+notes: ""
+readme_link: ""
