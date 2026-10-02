@@ -9,8 +9,9 @@ import pytest
 root_dir = Path(__file__).parent.parent.parent
 sys.path.insert(0, str(root_dir))
 
-from common import TreeNode  # noqa: E402
-from minimum_flips_in_binary_tree_to_get_result import minimumFlips  # noqa: E402
+from minimum_flips_in_binary_tree_to_get_result import minimumFlips
+
+from common import TreeNode
 
 
 @pytest.mark.parametrize(

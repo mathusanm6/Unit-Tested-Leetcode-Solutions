@@ -1,7 +1,6 @@
 """Test cases for the two_sum function."""
 
 import pytest
-
 from two_sum import twoSum
 
 

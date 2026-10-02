@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Script to automatically update README badges with current problem counts.
 This script counts the number of solved problems in each language and updates the README.md file.
@@ -6,6 +5,7 @@ This script counts the number of solved problems in each language and updates th
 
 import os
 import re
+import sys
 from pathlib import Path
 
 
@@ -108,4 +108,4 @@ if __name__ == "__main__":
     repo_root = script_dir.parent
     os.chdir(repo_root)
 
-    exit(main())
+    sys.exit(main())

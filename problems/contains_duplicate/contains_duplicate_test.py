@@ -1,7 +1,6 @@
 """Test cases for the contains_duplicate function."""
 
 import pytest
-
 from contains_duplicate import containsDuplicate
 
 

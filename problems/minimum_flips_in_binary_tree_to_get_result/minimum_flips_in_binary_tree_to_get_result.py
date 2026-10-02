@@ -1,10 +1,10 @@
-from common import TreeNode
 from math import inf
-from typing import Optional, Tuple
+
+from common import TreeNode
 
 
-def minimumFlips(root: Optional[TreeNode], result: bool) -> int:
-    def dfs(node: Optional[TreeNode]) -> Tuple[int, int]:
+def minimumFlips(root: TreeNode | None, result: bool) -> int:
+    def dfs(node: TreeNode | None) -> tuple[int, int]:
         """Returns a tuple (min_flips_to_false, min_flips_to_true)"""
         if node is None:
             return inf, inf

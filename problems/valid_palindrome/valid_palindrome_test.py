@@ -1,7 +1,6 @@
 """Test cases for the isPalindrome function."""
 
 import pytest
-
 from valid_palindrome import isPalindrome
 
 

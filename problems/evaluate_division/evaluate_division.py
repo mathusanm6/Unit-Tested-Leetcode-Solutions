@@ -1,10 +1,9 @@
-from typing import List
 from collections import defaultdict
 
 
 def evaluateDivision(
-    equations: List[List[str]], values: List[float], queries: List[List[str]]
-) -> List[float]:
+    equations: list[list[str]], values: list[float], queries: list[list[str]]
+) -> list[float]:
     def find(node: str) -> str:
         if parent[node] != node:
             original_parent = parent[node]

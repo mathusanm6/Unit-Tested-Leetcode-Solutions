@@ -1,7 +1,6 @@
 """Test cases for the group_anagrams function."""
 
 import pytest
-
 from group_anagrams import groupAnagrams
 
 

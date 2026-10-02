@@ -1,7 +1,4 @@
-from typing import List
-
-
-def twoSum(nums: List[int], target: int) -> List[int]:
+def twoSum(nums: list[int], target: int) -> list[int]:
     index_of = {}
     for idx, num in enumerate(nums):
         need = target - num

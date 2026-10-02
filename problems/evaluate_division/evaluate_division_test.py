@@ -1,7 +1,6 @@
 """Test cases for the evaluate_division function."""
 
 import pytest
-
 from evaluate_division import evaluateDivision
 
 
