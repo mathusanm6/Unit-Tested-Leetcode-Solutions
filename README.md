@@ -15,8 +15,8 @@
 ### 📊 Repository Stats
 
 [![Last Commit](https://img.shields.io/github/last-commit/mathusanm6/LeetCode?style=for-the-badge&logo=git&logoColor=white&color=blue)](https://github.com/mathusanm6/LeetCode/commits/main)
-[![C++ Solutions](https://img.shields.io/badge/C%2B%2B%20Solutions-9-blue?style=for-the-badge&logo=cplusplus&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
-[![Python Solutions](https://img.shields.io/badge/Python%20Solutions-9-blue?style=for-the-badge&logo=python&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
+[![C++ Solutions](https://img.shields.io/badge/C%2B%2B%20Solutions-10-blue?style=for-the-badge&logo=cplusplus&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
+[![Python Solutions](https://img.shields.io/badge/Python%20Solutions-10-blue?style=for-the-badge&logo=python&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
 
 </div>
 
@@ -192,6 +192,7 @@ This repository covers a comprehensive range of algorithmic patterns and data st
 
 | # | Title | Solution | Time | Space | Difficulty | Tag | Note |
 |---|-------|----------|------|-------|------------|-----|------|
+| 27 | [Remove Element](https://leetcode.com/problems/remove-element/) | [Python](./problems/remove_element/remove_element.py), [C++](./problems/remove_element/remove_element.cc) | _O(n)_ | _O(1)_ | Easy |  |  |
 | 88 | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) | [Python](./problems/merge_sorted_array/merge_sorted_array.py), [C++](./problems/merge_sorted_array/merge_sorted_array.cc) | _O(m + n)_ | _O(1)_ | Easy |  |  |
 | 125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | [Python](./problems/valid_palindrome/valid_palindrome.py), [C++](./problems/valid_palindrome/valid_palindrome.cc) | _O(n)_ | _O(1)_ | Easy |  |  |
 
