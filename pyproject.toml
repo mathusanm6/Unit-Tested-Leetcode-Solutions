@@ -1,0 +1,9 @@
+[project]
+name = "unit-tested-leetcode-solutions"
+version = "0.1.0"
+description = "Unit-tested LeetCode solutions in C++20 and Python 3."
+readme = "README.md"
+requires-python = ">=3.14.8"
+
+[tool.ruff]
+target-version = "py314"

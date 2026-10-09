@@ -64,7 +64,7 @@ This repository contains comprehensive, unit-tested solutions to LeetCode proble
 ### Languages & Standards
 
 - **C++**: C++20 with modern features and best practices
-- **Python**: Python 3.x with type hints and modern syntax
+- **Python**: Python 3.14 with type hints and modern syntax
 
 ### Testing Frameworks
 
