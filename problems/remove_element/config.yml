@@ -1,0 +1,17 @@
+problem:
+  number: 27
+  title: "Remove Element"
+  leetcode_url: "https://leetcode.com/problems/remove-element/"
+  difficulty: "easy"
+  tags: ["Two Pointers"]
+
+solutions:
+  python: "problems/remove_element/remove_element.py"
+  cpp: "problems/remove_element/remove_element.cc"
+
+complexity:
+  time: "O(n)"
+  space: "O(1)"
+
+notes: ""
+readme_link: ""
