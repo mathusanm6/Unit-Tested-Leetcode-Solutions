@@ -125,6 +125,7 @@ readme_link: ""
 
 ### `<snake>.py`
 
+The project targets Python 3.14.8 (`.python-version`, `pyproject.toml`, CI); don't downgrade syntax.
 A **free function** (never `class Solution`, no `self`), modern type hints (`list[int]`, `X | None`),
 no `from typing import ...` for builtins.
 
