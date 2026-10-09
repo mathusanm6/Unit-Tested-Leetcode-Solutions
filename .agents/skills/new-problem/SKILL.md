@@ -251,19 +251,21 @@ INSTANTIATE_TEST_SUITE_P(
 Run from the repo root (activate `.venv` first if present: `source .venv/bin/activate`):
 
 ```bash
+source .venv/bin/activate
 make test-py:<kebab>      # e.g. make test-py:remove-element   (kebab = snake with - instead of _)
 make test-cpp:<kebab>
-make format               # clang-format + ruff
+PATH="/Library/Developer/CommandLineTools/usr/bin:$PATH" make format  # ensures clang-format and ruff run
 make lint
 make readme               # regenerates the README table from every config.yml
 make update-badges        # refreshes the solution-count badges
 make clean                # cleans test runners and dSYM files
+git diff --exit-code problems/<snake>/  # CRITICAL: CI checks formatting with git diff; must have 0 diff!
 git status
 ```
 
 Rules:
 - Check test parity: `<snake>_test.py` (`ids`) count equals `<snake>_test.cc` (`.test_name`) count.
-- If a tool is missing (`clang-format`, `ruff`, `clang-tidy`), note it in the report without failing.
+- **CI format check compliance**: GitHub Actions runs `make format-cpp` and fails if `git diff --exit-code` is non-zero (`.github/workflows/linter-cpp.yml`). On macOS, `clang-format` is located at `/Library/Developer/CommandLineTools/usr/bin/clang-format`. Always ensure `clang-format` runs on all C++ files and any formatting changes are staged before committing.
 - Check `git diff README.md`: only the new problem row and badge counts should change.
 
 ## Step 6 - Report & Git Workflow
