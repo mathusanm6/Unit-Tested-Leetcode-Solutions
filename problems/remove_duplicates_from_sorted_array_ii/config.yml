@@ -1,0 +1,17 @@
+problem:
+  number: 80
+  title: "Remove Duplicates from Sorted Array II"
+  leetcode_url: "https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/"
+  difficulty: "medium"
+  tags: ["Two Pointers"]
+
+solutions:
+  python: "problems/remove_duplicates_from_sorted_array_ii/remove_duplicates_from_sorted_array_ii.py"
+  cpp: "problems/remove_duplicates_from_sorted_array_ii/remove_duplicates_from_sorted_array_ii.cc"
+
+complexity:
+  time: "O(n)"
+  space: "O(1)"
+
+notes: ""
+readme_link: ""
