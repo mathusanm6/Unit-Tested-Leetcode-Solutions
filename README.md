@@ -4,19 +4,19 @@
 
 ### 🔬 Code Health & Testing
 
-[![C++ Tests](https://img.shields.io/github/actions/workflow/status/mathusanm6/LeetCode/code-health-cpp.yml?branch=main&label=C%2B%2B%20Tests&logo=cplusplus&logoColor=white&style=for-the-badge&successColor=green&failureColor=red)](https://github.com/mathusanm6/LeetCode/actions/workflows/code-health-cpp.yml)
-[![Python Tests](https://img.shields.io/github/actions/workflow/status/mathusanm6/LeetCode/code-health-python.yml?branch=main&label=Python%20Tests&logo=python&logoColor=white&style=for-the-badge&successColor=green&failureColor=red)](https://github.com/mathusanm6/LeetCode/actions/workflows/code-health-python.yml)
+[![C++ Tests](https://img.shields.io/github/actions/workflow/status/mathusanm6/LeetCode/cpp-test.yml?branch=main&label=C%2B%2B%20Tests&logo=cplusplus&logoColor=white&style=for-the-badge&successColor=green&failureColor=red)](https://github.com/mathusanm6/LeetCode/actions/workflows/cpp-test.yml)
+[![Python Tests](https://img.shields.io/github/actions/workflow/status/mathusanm6/LeetCode/python-test.yml?branch=main&label=Python%20Tests&logo=python&logoColor=white&style=for-the-badge&successColor=green&failureColor=red)](https://github.com/mathusanm6/LeetCode/actions/workflows/python-test.yml)
 
 ### 🔍 Code Quality & Linting
 
-[![C++ Linter](https://img.shields.io/github/actions/workflow/status/mathusanm6/LeetCode/linter-cpp.yml?branch=main&label=C%2B%2B%20Linter&logo=cplusplus&logoColor=white&style=for-the-badge&successColor=green&failureColor=red)](https://github.com/mathusanm6/LeetCode/actions/workflows/linter-cpp.yml)
-[![Python Linter](https://img.shields.io/github/actions/workflow/status/mathusanm6/LeetCode/linter-python.yml?branch=main&label=Python%20Linter&logo=python&logoColor=white&style=for-the-badge&successColor=green&failureColor=red)](https://github.com/mathusanm6/LeetCode/actions/workflows/linter-python.yml)
+[![C++ Linter](https://img.shields.io/github/actions/workflow/status/mathusanm6/LeetCode/cpp-lint.yml?branch=main&label=C%2B%2B%20Linter&logo=cplusplus&logoColor=white&style=for-the-badge&successColor=green&failureColor=red)](https://github.com/mathusanm6/LeetCode/actions/workflows/cpp-lint.yml)
+[![Python Linter](https://img.shields.io/github/actions/workflow/status/mathusanm6/LeetCode/python-lint.yml?branch=main&label=Python%20Linter&logo=python&logoColor=white&style=for-the-badge&successColor=green&failureColor=red)](https://github.com/mathusanm6/LeetCode/actions/workflows/python-lint.yml)
 
 ### 📊 Repository Stats
 
 [![Last Commit](https://img.shields.io/github/last-commit/mathusanm6/LeetCode?style=for-the-badge&logo=git&logoColor=white&color=blue)](https://github.com/mathusanm6/LeetCode/commits/main)
-[![C++ Solutions](https://img.shields.io/badge/C%2B%2B%20Solutions-11-blue?style=for-the-badge&logo=cplusplus&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
-[![Python Solutions](https://img.shields.io/badge/Python%20Solutions-11-blue?style=for-the-badge&logo=python&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
+[![C++ Solutions](https://img.shields.io/badge/C%2B%2B%20Solutions-12-blue?style=for-the-badge&logo=cplusplus&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
+[![Python Solutions](https://img.shields.io/badge/Python%20Solutions-12-blue?style=for-the-badge&logo=python&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
 
 </div>
 
@@ -33,7 +33,9 @@ This repository contains comprehensive, unit-tested solutions to LeetCode proble
 
 ```
 ├── problems/                    # Problem solutions organized by name
+│   ├── defs.bzl                 # Starlark macro for defining problem targets
 │   ├── two_sum/                 # Individual problem directories
+│   │   ├── BUILD.bazel          # Problem target definitions
 │   │   ├── config.yml           # Problem metadata and configuration
 │   │   ├── two_sum.py           # Python solution
 │   │   ├── two_sum.cc           # C++ solution
@@ -41,20 +43,30 @@ This repository contains comprehensive, unit-tested solutions to LeetCode proble
 │   │   ├── two_sum_test.py      # Python unit tests
 │   │   └── two_sum_test.cc      # C++ unit tests
 │   └── ...
+├── common/                      # Shared data structures (e.g. TreeNode)
 ├── config/                      # Global configuration files
 │   ├── difficulties.yml         # Difficulty level definitions
 │   └── tags.yml                 # Problem tag categories
 ├── scripts/                     # Automation and utility scripts
+│   ├── format.sh                # Code formatting (C++ & Python)
+│   ├── lint.sh                  # Code linting (C++ & Python)
+│   ├── install_hooks.sh         # Git hooks installer
+│   ├── uninstall_hooks.sh       # Git hooks uninstaller
 │   ├── generate_readme.py       # Auto-generate README content
 │   ├── update_badges.py         # Update repository badges
 │   └── update_badges.sh         # Badge update automation
+├── tools/                       # Build tools & test runners
 ├── .github/workflows/           # CI/CD automation
-│   ├── code-health-*.yml        # Comprehensive testing workflows
-│   ├── linter-*.yml             # Code quality workflows
-│   ├── presubmit-*.yml          # Pre-merge validation
-│   └── update-badges.yml        # Automated badge updates
-├── Makefile                     # Build and test automation
+│   ├── cpp-test.yml             # C++ Bazel testing
+│   ├── python-test.yml          # Python Bazel testing
+│   ├── cpp-lint.yml             # C++ clang-tidy and clang-format
+│   ├── python-lint.yml          # Python ruff lint and format
+│   └── pr-size-labeler.yml      # PR size labeling
+├── MODULE.bazel                 # External dependency management (Bzlmod)
+├── BUILD.bazel                  # Root package definition
+├── .bazelrc                     # Bazel compiler flags & options
 ├── requirements.txt             # Python dependencies
+├── requirements_lock.txt        # Pinned dependencies for rules_python
 ├── .clang-format                # C++ code formatting rules
 └── .clang-tidy                  # C++ linting configuration
 ```
@@ -63,98 +75,94 @@ This repository contains comprehensive, unit-tested solutions to LeetCode proble
 
 ### Languages & Standards
 
-- **C++**: C++20 with modern features and best practices
+- **C++**: C++20 with modern features and strict compiler warnings (`-std=c++20 -Wall -Wextra -Wpedantic`)
 - **Python**: Python 3.14 with type hints and modern syntax
 
 ### Testing Frameworks
 
-- **C++**: Google Test (gtest) for comprehensive unit testing
-- **Python**: pytest with coverage reporting
+- **C++**: Google Test (`googletest@1.18.0.bcr.1`) hermetically managed via Bazel Bzlmod
+- **Python**: pytest hermetically managed via `rules_python`
 
 ### Code Quality Tools
 
-- **C++ Formatting**: clang-format for consistent code style
-- **C++ Linting**: clang-tidy for static analysis and best practices
-- **Python Formatting**: ruff for fast, comprehensive code formatting
-- **Python Linting**: ruff for linting, import sorting, and code quality
+- **C++ Formatting**: `clang-format` for consistent code style
+- **C++ Linting**: `clang-tidy` for static analysis and best practices
+- **Python Formatting & Linting**: `ruff` for fast formatting and linting
 
 ### Build & Automation
 
-- **Make**: Cross-platform build system with intelligent target detection
-- **GitHub Actions**: Automated CI/CD with parallel testing and validation
+- **Bazel**: Multi-language, hermetic build and test system with sandboxed execution and transitive caching
+- **GitHub Actions**: Automated CI/CD running native Bazel test targets
 
-## Running Tests
+## 🧪 Running Tests with Bazel
 
-The project includes comprehensive test suites for all solutions with cross-platform support.
-
-### 🐍 Python Tests
+All test targets run sandboxed and in parallel with action caching. No system installation of Google Test or CMake is required.
 
 ```bash
-# Run all Python tests with coverage
-make test-py:all
+# Run all tests (both C++ and Python) across the entire repo
+bazel test //problems/...
 
-# Run tests for a specific problem (e.g., two-sum)
-make test-py:two-sum
+# Run all tests for a specific problem (both languages)
+bazel test //problems/two_sum:test
+
+# Run only C++ tests
+bazel test //problems/two_sum:cc_test          # for a specific problem
+bazel test --test_tag_filters=cc //problems/... # for all problems
+
+# Run only Python tests
+bazel test //problems/two_sum:py_test          # for a specific problem
+bazel test --test_tag_filters=py //problems/... # for all problems
 ```
 
-### ⚡ C++ Tests
+## 🎨 Code Quality
+
+This project maintains high code quality standards through automated tooling:
+
+### Formatting & Linting
 
 ```bash
-# Run all C++ tests (auto-detects macOS/Linux)
-make test-cpp:all
+# Format code (C++ with clang-format, Python with ruff)
+./scripts/format.sh          # format both
+./scripts/format.sh cpp      # format C++ only
+./scripts/format.sh py       # format Python only
 
-# Run tests for a specific problem (e.g., two-sum)
-make test-cpp:two-sum
-
-# Run all tests (both languages)
-make test:all
+# Lint code (C++ with clang-tidy, Python with ruff)
+./scripts/lint.sh            # lint both
+./scripts/lint.sh cpp        # lint C++ only
+./scripts/lint.sh py         # lint Python only
 ```
 
-**Requirements:**
+### Git Pre-Commit Hooks
 
-- **macOS**: `brew install googletest`
-- **Linux**: `sudo apt-get install libgtest-dev` or build from source
-
-## Code Quality
-
-This project maintains high code quality standards through automated tooling and CI/CD integration.
-
-### 🎨 Formatting & Linting
+Install the pre-commit hook to automatically format, lint, update badges, and run tests before committing:
 
 ```bash
-# Format all code (C++ with clang-format, Python with ruff)
-make format
+./scripts/install_hooks.sh
+```
 
-# Lint all code with comprehensive checks
-make lint
+### Automation & Documentation
 
-# Language-specific operations
-make format-cpp     # Format C++ files with clang-format
-make format-py  # Format Python files with ruff
-make lint-cpp       # Lint C++ files with clang-tidy
-make lint-py    # Lint Python files with ruff
+```bash
+# Regenerate README from problem configurations
+bazel run //scripts:generate_readme
+
+# Update README badges with current solution counts
+bazel run //scripts:update_badges
+# or: ./scripts/update_badges.sh
+
+# Clean build artifacts
+bazel clean
 ```
 
 ### 🔄 Continuous Integration
 
-The project includes a comprehensive CI/CD pipeline:
+The GitHub Actions CI pipeline runs 4 focused workflows on both pull requests and pushes to `main`:
 
-- **🔍 Presubmit Checks**: Validate code changes before merge
-  - Format validation (clang-format, ruff)
-  - Linting checks (clang-tidy, ruff)
-  - Unit test execution for changed files
-- **🧪 Code Health**: Full validation after merge to main
+- **⚡ C++ / Test** (`cpp-test.yml`): Parallel sandboxed GoogleTest execution via Bazel
+- **🐍 Python / Test** (`python-test.yml`): Parallel sandboxed pytest execution via Bazel
+- **🔍 C++ / Lint** (`cpp-lint.yml`): Static analysis (`clang-tidy`) and format enforcement (`clang-format`)
+- **🔍 Python / Lint** (`python-lint.yml`): Ruff linting and format enforcement
 
-  - Complete test suite execution
-  - Cross-platform compatibility testing
-  - Coverage reporting
-
-- **📊 Automated Maintenance**:
-  - Badge updates reflecting current status
-  - PR size labeling for review optimization
-  - Workflow status monitoring
-
-All workflows leverage the project's Makefile for consistency across local development and CI environments.
 
 ## 🧮 Algorithms & Data Structures
 

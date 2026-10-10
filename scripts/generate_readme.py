@@ -299,10 +299,13 @@ class ReadmeGenerator:
 
 
 def main():
+    default_root = os.environ.get("BUILD_WORKSPACE_DIRECTORY", ".")
     parser = argparse.ArgumentParser(
         description="Generate README from problem configurations"
     )
-    parser.add_argument("--root", default=".", help="Root directory of the project")
+    parser.add_argument(
+        "--root", default=default_root, help="Root directory of the project"
+    )
     parser.add_argument("--readme", default="README.md", help="README file path")
     parser.add_argument("--verbose", "-v", action="store_true", help="Verbose output")
 

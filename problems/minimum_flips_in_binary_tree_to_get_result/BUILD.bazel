@@ -1,0 +1,6 @@
+load("//problems:defs.bzl", "leetcode_problem")
+
+leetcode_problem(
+    extra_cc_deps = ["//common/trees"],
+    extra_py_deps = ["//common"],
+)

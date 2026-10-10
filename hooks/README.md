@@ -8,23 +8,23 @@ This directory contains Git hooks that can be installed to maintain code quality
 
 The pre-commit hook ensures code quality by running the following checks before allowing any commit:
 
-1. **Badge Updates and README Check** - Automatically updates README badges when problem files are modified
-2. **Code Formatting** - Formats C++ and Python files using clang-format and ruff
-3. **Code Linting** - Lints C++ and Python files using clang-tidy and ruff
-4. **Tests** - Runs all tests to ensure code functionality
+1. **Badge Updates and README Check** - Automatically updates README badges and verifies `README.md` via `bazel run //scripts:generate_readme`
+2. **Code Formatting** - Formats C++ and Python files using `./scripts/format.sh` (`clang-format` and `ruff`)
+3. **Code Linting** - Lints C++ and Python files using `./scripts/lint.sh` (`clang-tidy` and `ruff`)
+4. **Tests** - Runs test suites via `bazel test //problems/...`
 
 ## Installation
 
 To install the hooks, run:
 
 ```bash
-make install-hooks
+./scripts/install_hooks.sh
 ```
 
 To uninstall the hooks, run:
 
 ```bash
-make uninstall-hooks
+./scripts/uninstall_hooks.sh
 ```
 
 ## Manual Installation

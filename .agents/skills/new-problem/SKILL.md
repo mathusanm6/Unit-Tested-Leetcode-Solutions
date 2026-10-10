@@ -87,12 +87,13 @@ Build one language-neutral list of cases:
 - Use the user's provided sample tests. You may add common, verified edge cases (e.g. empty input, single element) if they pass against the user's solution, but **never pause to ask** the user "Do you want me to add extra edge cases?".
 - For in-place array problems returning length `k`: assert `k == expected_k` and `nums[:k] == expected_nums`. Verify determinism against the user's code first. Do not pause to ask how to compare unless the test fails.
 
-## Step 4 - Create the 6 files immediately
+## Step 4 - Create the 7 files immediately
 
 Do not show a plan and wait for "Create it" confirmation. Immediately create:
 
 ```
 problems/<snake>/
+├── BUILD.bazel
 ├── config.yml
 ├── <snake>.py
 ├── <snake>_test.py
@@ -100,6 +101,15 @@ problems/<snake>/
 ├── <snake>.cc
 └── <snake>_test.cc
 ```
+
+### `BUILD.bazel`
+
+```python
+load("//problems:defs.bzl", "leetcode_problem")
+
+leetcode_problem()
+```
+*(For tree problems using `TreeNode`, pass `extra_cc_deps = ["//common/trees"]` and `extra_py_deps = ["//common"]`).*
 
 ### `config.yml`
 

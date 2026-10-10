@@ -104,8 +104,12 @@ def main():
 
 if __name__ == "__main__":
     # Change to the repository root directory
-    script_dir = Path(__file__).parent
-    repo_root = script_dir.parent
-    os.chdir(repo_root)
+    workspace_root = os.environ.get("BUILD_WORKSPACE_DIRECTORY")
+    if workspace_root:
+        os.chdir(workspace_root)
+    else:
+        script_dir = Path(__file__).parent
+        repo_root = script_dir.parent
+        os.chdir(repo_root)
 
     sys.exit(main())

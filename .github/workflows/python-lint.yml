@@ -1,12 +1,15 @@
 ---
-name: Python Linter
+name: Python / Lint
 
 on: # yamllint disable-line rule:truthy
+  pull_request:
+    branches: ["main"]
   push:
     branches: ["main"]
 
 jobs:
-  lint-python:
+  lint:
+    name: Ruff Lint & Format
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -26,16 +29,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Lint Python code using Makefile
+      - name: Run ruff check
         run: |
-          make lint-py
+          ./scripts/lint.sh py
 
-      - name: Format check Python code using Makefile
+      - name: Check ruff format
         run: |
-          make format-py
-          # Check if any files were modified by formatting
+          ./scripts/format.sh py
           if ! git diff --exit-code; then
-            echo "Code formatting issues found. Please run 'make \
-            format-py' locally."
+            echo "Python formatting issues found. Run './scripts/format.sh py' locally."
             exit 1
           fi
