@@ -95,7 +95,7 @@ print_status "Step ${CURRENT_STEP}/${TOTAL_STEPS}: Updating badges and checking 
 # If problem files changed, automatically update badges
 if [ "$HAS_PROBLEM_FILES" = true ]; then
     print_status "Problem files detected, updating badges..."
-    if make update-badges; then
+    if ./scripts/update_badges.sh; then
         print_success "Badges updated successfully"
         
         # Check if badge update modified README.md
@@ -110,11 +110,15 @@ if [ "$HAS_PROBLEM_FILES" = true ]; then
 fi
 
 # Now check if README is up to date
-if make readme-check; then
+cp README.md README.md.backup
+bazel run //scripts:generate_readme > /dev/null 2>&1 || true
+if diff -q README.md README.md.backup > /dev/null 2>&1; then
+    rm -f README.md.backup
     print_success "README.md is up to date"
 else
+    mv README.md.backup README.md
     print_error "README.md is outdated or generation failed"
-    print_error "Please run 'make readme' to update README.md"
+    print_error "Please run 'bazel run //scripts:generate_readme' to update README.md"
     exit 1
 fi
 CURRENT_STEP=$((CURRENT_STEP + 1))
@@ -122,7 +126,7 @@ CURRENT_STEP=$((CURRENT_STEP + 1))
 # Step 2: Format code (only if code files are changed)
 if [ "$HAS_CODE_FILES" = true ]; then
     print_status "Step ${CURRENT_STEP}/${TOTAL_STEPS}: Formatting code..."
-    if make format > /dev/null 2>&1; then
+    if ./scripts/format.sh > /dev/null 2>&1; then
         print_success "Code formatting completed"
         
         # Check if formatting made any changes
@@ -152,17 +156,12 @@ fi
 # Step 3: Run tests (only if problem files are changed)
 if [ "$HAS_PROBLEM_FILES" = true ]; then
     print_status "Step ${CURRENT_STEP}/${TOTAL_STEPS}: Running tests for changed problems..."
-    print_status "DEBUG: Current directory: $(pwd)"
-    print_status "DEBUG: Python path: $(which python3)"
-    print_status "DEBUG: Pytest path: $(which pytest)"
-    print_status "DEBUG: PATH: $PATH"
-    if make test:all; then
+    if bazel test //problems/...; then
         print_success "All tests passed"
     else
         print_error "Tests failed"
         print_error "Please fix failing tests and try again"
-        print_status "Run 'make test:all' to see detailed test results"
-        print_status "DEBUG: Last command exit code: $?"
+        print_status "Run 'bazel test //problems/...' to see detailed test results"
         exit 1
     fi
     CURRENT_STEP=$((CURRENT_STEP + 1))
@@ -179,14 +178,14 @@ if [ "$HAS_PYTHON_FILES" = true ] || [ "$HAS_CPP_FILES" = true ]; then
     LINT_SUCCESS=true
     if [ "$HAS_PYTHON_FILES" = true ]; then
         print_status "Linting Python files..."
-        if ! make lint-py; then
+        if ! ./scripts/lint.sh py; then
             LINT_SUCCESS=false
         fi
     fi
     
     if [ "$HAS_CPP_FILES" = true ]; then
         print_status "Linting C++ files..."
-        if ! make lint-cpp; then
+        if ! ./scripts/lint.sh cpp; then
             LINT_SUCCESS=false
         fi
     fi
@@ -196,12 +195,13 @@ if [ "$HAS_PYTHON_FILES" = true ] || [ "$HAS_CPP_FILES" = true ]; then
     else
         print_error "Code linting failed"
         print_error "Please fix linting issues and try again"
-        print_status "Run 'make lint' to see detailed linting errors"
+        print_status "Run './scripts/lint.sh' to see detailed linting errors"
         exit 1
     fi
 else
     print_status "Skipping linting (no Python or C++ files changed)"
 fi
+
 
 # All checks passed
 print_success "All pre-commit checks passed! ✨"

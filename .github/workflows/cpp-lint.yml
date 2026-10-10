@@ -1,0 +1,33 @@
+---
+name: C++ / Lint
+
+on: # yamllint disable-line rule:truthy
+  pull_request:
+    branches: ["main"]
+  push:
+    branches: ["main"]
+
+jobs:
+  lint:
+    name: Clang-Tidy & Clang-Format
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y clang-format clang-tidy
+
+      - name: Run clang-tidy
+        run: |
+          ./scripts/lint.sh cpp
+
+      - name: Check clang-format
+        run: |
+          ./scripts/format.sh cpp
+          if ! git diff --exit-code; then
+            echo "C++ formatting issues found. Run './scripts/format.sh cpp' locally."
+            exit 1
+          fi

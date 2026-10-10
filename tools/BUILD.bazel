@@ -1,0 +1,12 @@
+load("@rules_python//python:defs.bzl", "py_binary")
+
+exports_files(["pytest_runner.py"], visibility = ["//visibility:public"])
+
+py_binary(
+    name = "pytest_runner",
+    srcs = ["pytest_runner.py"],
+    deps = [
+        "@pip//pytest",
+    ],
+    visibility = ["//visibility:public"],
+)
