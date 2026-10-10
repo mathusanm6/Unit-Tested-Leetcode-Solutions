@@ -1,5 +1,6 @@
 #include "remove_element.h"
 
+#include <cstddef>
 #include <vector>
 
 int removeElement(std::vector<int>& nums, int val) {

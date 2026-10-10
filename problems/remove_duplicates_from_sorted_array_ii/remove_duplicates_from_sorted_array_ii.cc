@@ -3,12 +3,12 @@
 #include <vector>
 
 int removeDuplicates(std::vector<int>& nums) {
-    int write_index = 0;
-    for (int num : nums) {
-        if (write_index < 2 || num != nums[write_index - 2]) {
-            nums[write_index] = num;
-            write_index += 1;
+    int writeIndex = 0;
+    for (const int num : nums) {
+        if (writeIndex < 2 || num != nums[writeIndex - 2]) {
+            nums[writeIndex] = num;
+            writeIndex += 1;
         }
     }
-    return write_index;
+    return writeIndex;
 }

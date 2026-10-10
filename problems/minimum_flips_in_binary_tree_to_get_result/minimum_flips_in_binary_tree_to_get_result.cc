@@ -8,37 +8,37 @@
 using namespace std;
 
 int minimumFlips(TreeNode* root, bool result) {
+    constexpr int Infinity = 1U << 30U;
     function<pair<int, int>(TreeNode*)> dfs = [&](TreeNode* node) -> pair<int, int> {
-        if (!node) {
-            return {1 << 30, 1 << 30};  // Impossible case
+        if (node == nullptr) {
+            return {Infinity, Infinity};  // Impossible case
         }
         const int x = node->val;
         if (x >= 0 && x <= 1) {
             return {x == 0 ? 0 : 1, x == 1 ? 0 : 1};
         }
 
-        auto [left_false, left_true] = dfs(node->left);
-        auto [right_false, right_true] = dfs(node->right);
+        auto [leftFalse, leftTrue] = dfs(node->left);
+        auto [rightFalse, rightTrue] = dfs(node->right);
         if (x == 2) {  // OR
-            return {left_false + right_false, min({left_true + right_true, left_true + right_false,
-                                                   left_false + right_true})};
+            return {leftFalse + rightFalse,
+                    min({leftTrue + rightTrue, leftTrue + rightFalse, leftFalse + rightTrue})};
         } else if (x == 3) {  // AND
-            return {
-                min({left_false + right_false, left_true + right_false, left_false + right_true}),
-                left_true + right_true};
+            return {min({leftFalse + rightFalse, leftTrue + rightFalse, leftFalse + rightTrue}),
+                    leftTrue + rightTrue};
         } else if (x == 4) {  // XOR
-            return {min({left_false + right_false, left_true + right_true}),
-                    min({left_true + right_false, left_false + right_true})};
+            return {min({leftFalse + rightFalse, leftTrue + rightTrue}),
+                    min({leftTrue + rightFalse, leftFalse + rightTrue})};
         } else if (x == 5) {  // NOT
-            if (node->left && !node->right) {
-                return {left_true, left_false};
-            } else if (!node->left && node->right) {
-                return {right_true, right_false};
+            if (node->left != nullptr && node->right == nullptr) {
+                return {leftTrue, leftFalse};
+            } else if (node->left == nullptr && node->right != nullptr) {
+                return {rightTrue, rightFalse};
             } else {
-                return {1 << 30, 1 << 30};  // Invalid operation
+                return {Infinity, Infinity};  // Invalid operation
             }
         } else {
-            return {1 << 30, 1 << 30};  // Invalid operation
+            return {Infinity, Infinity};  // Invalid operation
         }
     };
     return result ? dfs(root).second : dfs(root).first;
