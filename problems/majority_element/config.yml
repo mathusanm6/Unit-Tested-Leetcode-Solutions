@@ -1,0 +1,17 @@
+problem:
+  number: 169
+  title: "Majority Element"
+  leetcode_url: "https://leetcode.com/problems/majority-element/"
+  difficulty: "easy"
+  tags: ["Arrays & Hashing"]
+
+solutions:
+  python: "problems/majority_element/majority_element.py"
+  cpp: "problems/majority_element/majority_element.cc"
+
+complexity:
+  time: "O(n)"
+  space: "O(1)"
+
+notes: "Using Boyer-Moore Majority Vote Algorithm."
+readme_link: ""
