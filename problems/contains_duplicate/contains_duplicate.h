@@ -1,3 +1,3 @@
 #include <vector>
 
-bool containsDuplicate(std::vector<int>& nums);
+bool containsDuplicate(const std::vector<int>& nums);

@@ -10,7 +10,7 @@ std::vector<int> twoSum(const std::vector<int> &nums, const int target) {
     for (int idx = 0; idx < numCount; ++idx) {
         const int num = nums[idx];
         const int need = target - num;
-        if (auto iterator = indexOf.find(need); iterator != indexOf.end()) {
+        if (const auto iterator = indexOf.find(need); iterator != indexOf.end()) {
             return {iterator->second, idx};
         }
         indexOf.emplace(num, idx);  // Note: no overwrite if x already exists
