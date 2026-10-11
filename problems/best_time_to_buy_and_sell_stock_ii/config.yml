@@ -1,0 +1,17 @@
+problem:
+  number: 122
+  title: "Best Time to Buy and Sell Stock II"
+  leetcode_url: "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/"
+  difficulty: "medium"
+  tags: ["1-D Dynamic Programming"]
+
+solutions:
+  python: "problems/best_time_to_buy_and_sell_stock_ii/best_time_to_buy_and_sell_stock_ii.py"
+  cpp: "problems/best_time_to_buy_and_sell_stock_ii/best_time_to_buy_and_sell_stock_ii.cc"
+
+complexity:
+  time: "O(n)"
+  space: "O(1)"
+
+notes: ""
+readme_link: ""
