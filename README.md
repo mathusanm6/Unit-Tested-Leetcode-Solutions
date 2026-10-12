@@ -15,8 +15,8 @@
 ### 📊 Repository Stats
 
 [![Last Commit](https://img.shields.io/github/last-commit/mathusanm6/LeetCode?style=for-the-badge&logo=git&logoColor=white&color=blue)](https://github.com/mathusanm6/LeetCode/commits/main)
-[![C++ Solutions](https://img.shields.io/badge/C%2B%2B%20Solutions-19-blue?style=for-the-badge&logo=cplusplus&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
-[![Python Solutions](https://img.shields.io/badge/Python%20Solutions-19-blue?style=for-the-badge&logo=python&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
+[![C++ Solutions](https://img.shields.io/badge/C%2B%2B%20Solutions-20-blue?style=for-the-badge&logo=cplusplus&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
+[![Python Solutions](https://img.shields.io/badge/Python%20Solutions-20-blue?style=for-the-badge&logo=python&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
 
 </div>
 
@@ -196,6 +196,7 @@ This repository covers a comprehensive range of algorithmic patterns and data st
 | 169 | [Majority Element](https://leetcode.com/problems/majority-element/) | [Python](./problems/majority_element/majority_element.py), [C++](./problems/majority_element/majority_element.cc) | _O(n)_ | _O(1)_ | Easy |  | Using Boyer-Moore Majority Vote Algorithm. |
 | 217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | [Python](./problems/contains_duplicate/contains_duplicate.py), [C++](./problems/contains_duplicate/contains_duplicate.cc) | _O(n)_ | _O(n)_ | Easy |  |  |
 | 274 | [H-Index](https://leetcode.com/problems/h-index/) | [Python](./problems/h_index/h_index.py), [C++](./problems/h_index/h_index.cc) | _O(n log n)_ | _O(1)_ | Medium |  |  |
+| 380 | [Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/) | [Python](./problems/insert_delete_getrandom_o1/insert_delete_getrandom_o1.py), [C++](./problems/insert_delete_getrandom_o1/insert_delete_getrandom_o1.cc) | _O(1)_ | _O(n)_ | Medium |  |  |
 | 2303 | [Calculate Amount Paid In Taxes](https://leetcode.com/problems/calculate-amount-paid-in-taxes/) | [Python](./problems/calculate_amount_paid_in_taxes/calculate_amount_paid_in_taxes.py), [C++](./problems/calculate_amount_paid_in_taxes/calculate_amount_paid_in_taxes.cc) | _O(n)_ | _O(1)_ | Easy |  |  |
 
 ## Two Pointers

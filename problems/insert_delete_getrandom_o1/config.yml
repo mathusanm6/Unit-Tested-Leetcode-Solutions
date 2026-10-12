@@ -1,0 +1,17 @@
+problem:
+  number: 380
+  title: "Insert Delete GetRandom O(1)"
+  leetcode_url: "https://leetcode.com/problems/insert-delete-getrandom-o1/"
+  difficulty: "medium"
+  tags: ["Arrays & Hashing"]
+
+solutions:
+  python: "problems/insert_delete_getrandom_o1/insert_delete_getrandom_o1.py"
+  cpp: "problems/insert_delete_getrandom_o1/insert_delete_getrandom_o1.cc"
+
+complexity:
+  time: "O(1)"
+  space: "O(n)"
+
+notes: ""
+readme_link: ""
