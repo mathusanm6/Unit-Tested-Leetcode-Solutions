@@ -1,0 +1,17 @@
+problem:
+  number: 45
+  title: "Jump Game II"
+  leetcode_url: "https://leetcode.com/problems/jump-game-ii/"
+  difficulty: "medium"
+  tags: ["Greedy"]
+
+solutions:
+  python: "problems/jump_game_ii/jump_game_ii.py"
+  cpp: "problems/jump_game_ii/jump_game_ii.cc"
+
+complexity:
+  time: "O(n)"
+  space: "O(1)"
+
+notes: ""
+readme_link: ""
