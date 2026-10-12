@@ -1,0 +1,17 @@
+problem:
+  number: 189
+  title: "Rotate Array"
+  leetcode_url: "https://leetcode.com/problems/rotate-array/"
+  difficulty: "medium"
+  tags: ["Two Pointers"]
+
+solutions:
+  python: "problems/rotate_array/rotate_array.py"
+  cpp: "problems/rotate_array/rotate_array.cc"
+
+complexity:
+  time: "O(n)"
+  space: "O(1)"
+
+notes: ""
+readme_link: ""
