@@ -1,0 +1,17 @@
+problem:
+  number: 274
+  title: "H-Index"
+  leetcode_url: "https://leetcode.com/problems/h-index/"
+  difficulty: "medium"
+  tags: ["Arrays & Hashing"]
+
+solutions:
+  python: "problems/h_index/h_index.py"
+  cpp: "problems/h_index/h_index.cc"
+
+complexity:
+  time: "O(n log n)"
+  space: "O(1)"
+
+notes: ""
+readme_link: ""
