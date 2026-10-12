@@ -104,29 +104,28 @@ file above, the `TreeNode` variant, and the mechanical code-adaptation rules (un
 
 ## Step 5 - Verify
 
-Run from the repo root (activate `.venv` first if present: `source .venv/bin/activate`):
+**Sandbox execution rules for this repo (do NOT try sandbox first where `BypassSandbox: true` is specified below):**
+- **Use `BypassSandbox: false` (sandbox works):** `./scripts/format.sh`, `./scripts/lint.sh`, `git diff`, `git status`, `ls`.
+- **Use `BypassSandbox: true` directly (never try sandboxed first):**
+  - Any `bazel` command (`bazel test`, `bazel run`, `bazel clean`) — the Bazel server socket in `/var/tmp/_bazel_*` is blocked in the sandbox and causes `bazel` to hang indefinitely.
+  - Any Python invocation via `.venv/bin/python` or `./scripts/update_badges.sh` — `.venv/bin/python` symlinks into `~/.pyenv`, which is blocked in the sandbox (`Operation not permitted`).
+  - Any `git` write or network command (`git checkout`, `git add`, `git commit`, `git push`) and `gh pr create` — `.git/` writes and network access are blocked in the sandbox.
+
+Run from the repo root:
 
 ```bash
-source .venv/bin/activate
-
-# Run tests for the problem (runs both Python and C++ test targets)
-bazel test //problems/<snake>:test
-
-# Or run tests individually:
-# bazel test //problems/<snake>:py_test
-# bazel test //problems/<snake>:cc_test
-
-# Format and lint code
+# 1. Format and lint code (runs in sandbox: BypassSandbox: false)
 ./scripts/format.sh
 ./scripts/lint.sh
 
-# Regenerate README table and refresh badges
+# 2. Run tests for the problem (requires BypassSandbox: true)
+bazel test //problems/<snake>:test
+
+# 3. Regenerate README table and refresh badges (requires BypassSandbox: true)
 bazel run //scripts:generate_readme
-bazel run //scripts:update_badges  # or: ./scripts/update_badges.sh
+bazel run //scripts:update_badges
 
-# Clean build artifacts if needed
-# bazel clean
-
+# 4. Verify formatting and diffs (runs in sandbox: BypassSandbox: false)
 git diff --exit-code problems/<snake>/  # CRITICAL: CI checks formatting with git diff; must have 0 diff!
 git status
 ```
