@@ -1,0 +1,17 @@
+problem:
+  number: 135
+  title: "Candy"
+  leetcode_url: "https://leetcode.com/problems/candy/"
+  difficulty: "hard"
+  tags: ["Greedy"]
+
+solutions:
+  python: "problems/candy/candy.py"
+  cpp: "problems/candy/candy.cc"
+
+complexity:
+  time: "O(n)"
+  space: "O(n)"
+
+notes: "We do it in two passes: one left to right and other right to left."
+readme_link: ""
