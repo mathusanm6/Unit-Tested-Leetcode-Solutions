@@ -1,0 +1,3 @@
+load("//problems:defs.bzl", "leetcode_problem")
+
+leetcode_problem()
