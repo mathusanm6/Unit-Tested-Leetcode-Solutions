@@ -13,5 +13,5 @@ complexity:
   time: "O(n)"
   space: "O(1)"
 
-notes: "We are using prefix sum 1."
+notes: "We are using prefix sum's logic."
 readme_link: ""
