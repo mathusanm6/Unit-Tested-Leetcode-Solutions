@@ -1,0 +1,17 @@
+problem:
+  number: 134
+  title: "Gas Station"
+  leetcode_url: "https://leetcode.com/problems/gas-station/"
+  difficulty: "medium"
+  tags: ["Greedy"]
+
+solutions:
+  python: "problems/gas_station/gas_station.py"
+  cpp: "problems/gas_station/gas_station.cc"
+
+complexity:
+  time: "O(n)"
+  space: "O(1)"
+
+notes: ""
+readme_link: ""
