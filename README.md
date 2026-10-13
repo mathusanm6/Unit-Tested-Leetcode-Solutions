@@ -15,8 +15,8 @@
 ### 📊 Repository Stats
 
 [![Last Commit](https://img.shields.io/github/last-commit/mathusanm6/LeetCode?style=for-the-badge&logo=git&logoColor=white&color=blue)](https://github.com/mathusanm6/LeetCode/commits/main)
-[![C++ Solutions](https://img.shields.io/badge/C%2B%2B%20Solutions-22-blue?style=for-the-badge&logo=cplusplus&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
-[![Python Solutions](https://img.shields.io/badge/Python%20Solutions-22-blue?style=for-the-badge&logo=python&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
+[![C++ Solutions](https://img.shields.io/badge/C%2B%2B%20Solutions-23-blue?style=for-the-badge&logo=cplusplus&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
+[![Python Solutions](https://img.shields.io/badge/Python%20Solutions-23-blue?style=for-the-badge&logo=python&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
 
 </div>
 
@@ -243,3 +243,4 @@ This repository covers a comprehensive range of algorithmic patterns and data st
 | 55 | [Jump Game](https://leetcode.com/problems/jump-game/) | [Python](./problems/jump_game/jump_game.py), [C++](./problems/jump_game/jump_game.cc) | _O(n)_ | _O(1)_ | Medium |  |  |
 | 121 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | [Python](./problems/best_time_to_buy_and_sell_stock/best_time_to_buy_and_sell_stock.py), [C++](./problems/best_time_to_buy_and_sell_stock/best_time_to_buy_and_sell_stock.cc) | _O(n)_ | _O(1)_ | Easy |  |  |
 | 134 | [Gas Station](https://leetcode.com/problems/gas-station/) | [Python](./problems/gas_station/gas_station.py), [C++](./problems/gas_station/gas_station.cc) | _O(n)_ | _O(1)_ | Medium |  |  |
+| 135 | [Candy](https://leetcode.com/problems/candy/) | [Python](./problems/candy/candy.py), [C++](./problems/candy/candy.cc) | _O(n)_ | _O(n)_ | Hard |  | We do it in two passes: one left to right and other right to left. |
