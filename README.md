@@ -15,8 +15,8 @@
 ### 📊 Repository Stats
 
 [![Last Commit](https://img.shields.io/github/last-commit/mathusanm6/LeetCode?style=for-the-badge&logo=git&logoColor=white&color=blue)](https://github.com/mathusanm6/LeetCode/commits/main)
-[![C++ Solutions](https://img.shields.io/badge/C%2B%2B%20Solutions-25-blue?style=for-the-badge&logo=cplusplus&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
-[![Python Solutions](https://img.shields.io/badge/Python%20Solutions-25-blue?style=for-the-badge&logo=python&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
+[![C++ Solutions](https://img.shields.io/badge/C%2B%2B%20Solutions-26-blue?style=for-the-badge&logo=cplusplus&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
+[![Python Solutions](https://img.shields.io/badge/Python%20Solutions-26-blue?style=for-the-badge&logo=python&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
 
 </div>
 
@@ -241,6 +241,7 @@ This repository covers a comprehensive range of algorithmic patterns and data st
 
 | # | Title | Solution | Time | Space | Difficulty | Tag | Note |
 |---|-------|----------|------|-------|------------|-----|------|
+| 12 | [Integer to Roman](https://leetcode.com/problems/integer-to-roman/) | [Python](./problems/integer_to_roman/integer_to_roman.py), [C++](./problems/integer_to_roman/integer_to_roman.cc) | _O(1)_ | _O(1)_ | Medium |  |  |
 | 45 | [Jump Game II](https://leetcode.com/problems/jump-game-ii/) | [Python](./problems/jump_game_ii/jump_game_ii.py), [C++](./problems/jump_game_ii/jump_game_ii.cc) | _O(n)_ | _O(1)_ | Medium |  |  |
 | 55 | [Jump Game](https://leetcode.com/problems/jump-game/) | [Python](./problems/jump_game/jump_game.py), [C++](./problems/jump_game/jump_game.cc) | _O(n)_ | _O(1)_ | Medium |  |  |
 | 121 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | [Python](./problems/best_time_to_buy_and_sell_stock/best_time_to_buy_and_sell_stock.py), [C++](./problems/best_time_to_buy_and_sell_stock/best_time_to_buy_and_sell_stock.cc) | _O(n)_ | _O(1)_ | Easy |  |  |
