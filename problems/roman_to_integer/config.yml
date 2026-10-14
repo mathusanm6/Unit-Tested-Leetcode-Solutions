@@ -1,0 +1,17 @@
+problem:
+  number: 13
+  title: "Roman to Integer"
+  leetcode_url: "https://leetcode.com/problems/roman-to-integer/"
+  difficulty: "easy"
+  tags: ["Arrays & Hashing"]
+
+solutions:
+  python: "problems/roman_to_integer/roman_to_integer.py"
+  cpp: "problems/roman_to_integer/roman_to_integer.cc"
+
+complexity:
+  time: "O(n)"
+  space: "O(1)"
+
+notes: ""
+readme_link: ""
