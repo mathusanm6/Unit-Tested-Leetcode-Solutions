@@ -1,0 +1,17 @@
+problem:
+  number: 151
+  title: "Reverse Words in a String"
+  leetcode_url: "https://leetcode.com/problems/reverse-words-in-a-string/"
+  difficulty: "medium"
+  tags: ["Two Pointers"]
+
+solutions:
+  python: "problems/reverse_words_in_a_string/reverse_words_in_a_string.py"
+  cpp: "problems/reverse_words_in_a_string/reverse_words_in_a_string.cc"
+
+complexity:
+  time: "O(n)"
+  space: "O(1)"
+
+notes: "For C++, space complexity is _O(1)_ auxiliary space by modifying the string in-place. For Python, space complexity is _O(n)_ due to splitting the string into words."
+readme_link: ""
