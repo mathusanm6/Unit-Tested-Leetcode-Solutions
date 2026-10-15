@@ -1,0 +1,17 @@
+problem:
+  number: 58
+  title: "Length of Last Word"
+  leetcode_url: "https://leetcode.com/problems/length-of-last-word/"
+  difficulty: "easy"
+  tags: ["Arrays & Hashing"]
+
+solutions:
+  python: "problems/length_of_last_word/length_of_last_word.py"
+  cpp: "problems/length_of_last_word/length_of_last_word.cc"
+
+complexity:
+  time: "O(n)"
+  space: "O(1)"
+
+notes: "For C++, space complexity is _O(1)_ as we traverse the string in-place from the end. For Python, it is _O(n)_ due to splitting the string into words."
+readme_link: ""
