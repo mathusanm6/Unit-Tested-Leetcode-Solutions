@@ -15,8 +15,8 @@
 ### 📊 Repository Stats
 
 [![Last Commit](https://img.shields.io/github/last-commit/mathusanm6/LeetCode?style=for-the-badge&logo=git&logoColor=white&color=blue)](https://github.com/mathusanm6/LeetCode/commits/main)
-[![C++ Solutions](https://img.shields.io/badge/C%2B%2B%20Solutions-26-blue?style=for-the-badge&logo=cplusplus&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
-[![Python Solutions](https://img.shields.io/badge/Python%20Solutions-26-blue?style=for-the-badge&logo=python&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
+[![C++ Solutions](https://img.shields.io/badge/C%2B%2B%20Solutions-27-blue?style=for-the-badge&logo=cplusplus&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
+[![Python Solutions](https://img.shields.io/badge/Python%20Solutions-27-blue?style=for-the-badge&logo=python&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
 
 </div>
 
@@ -194,6 +194,7 @@ This repository covers a comprehensive range of algorithmic patterns and data st
 | 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | [Python](./problems/two_sum/two_sum.py), [C++](./problems/two_sum/two_sum.cc) | _O(n)_ | _O(n)_ | Easy |  |  |
 | 13 | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | [Python](./problems/roman_to_integer/roman_to_integer.py), [C++](./problems/roman_to_integer/roman_to_integer.cc) | _O(n)_ | _O(1)_ | Easy |  |  |
 | 49 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) | [Python](./problems/group_anagrams/group_anagrams.py), [C++](./problems/group_anagrams/group_anagrams.cc) | _O(n * k log k)_ | _O(n)_ | Medium |  | For C++, the complexity is _O(n * k log k)_, where n is the number of strings and k is the maximum length of a string. But for Python, the complexity is _O(n * k)_ as there is no sorting involved. |
+| 58 | [Length of Last Word](https://leetcode.com/problems/length-of-last-word/) | [Python](./problems/length_of_last_word/length_of_last_word.py), [C++](./problems/length_of_last_word/length_of_last_word.cc) | _O(n)_ | _O(1)_ | Easy |  | For C++, space complexity is _O(1)_ as we traverse the string in-place from the end. For Python, it is _O(n)_ due to splitting the string into words. |
 | 169 | [Majority Element](https://leetcode.com/problems/majority-element/) | [Python](./problems/majority_element/majority_element.py), [C++](./problems/majority_element/majority_element.cc) | _O(n)_ | _O(1)_ | Easy |  | Using Boyer-Moore Majority Vote Algorithm. |
 | 217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | [Python](./problems/contains_duplicate/contains_duplicate.py), [C++](./problems/contains_duplicate/contains_duplicate.cc) | _O(n)_ | _O(n)_ | Easy |  |  |
 | 238 | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | [Python](./problems/product_of_array_except_self/product_of_array_except_self.py), [C++](./problems/product_of_array_except_self/product_of_array_except_self.cc) | _O(n)_ | _O(1)_ | Medium |  | We are using prefix sum's logic. |
