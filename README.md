@@ -226,6 +226,12 @@ This repository covers a comprehensive range of algorithmic patterns and data st
 |---|-------|----------|------|-------|------------|-----|------|
 | 1087 | [Brace Expansion](https://leetcode.com/problems/brace-expansion/) | [Python](./problems/brace_expansion/brace_expansion.py), [C++](./problems/brace_expansion/brace_expansion.cc) | _O(M^K + M log M)_ | _O(M^K)_ | Medium |  | M = max choices per brace set, K = number of brace sets. M^K for generating combinations, M log M for sorting. |
 
+## Tries
+
+| # | Title | Solution | Time | Space | Difficulty | Tag | Note |
+|---|-------|----------|------|-------|------------|-----|------|
+| 14 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | [Python](./problems/longest_common_prefix/longest_common_prefix.py), [C++](./problems/longest_common_prefix/longest_common_prefix.cc) | _O(n * m)_ | _O(n * m)_ | Easy |  |  |
+
 ## Graphs
 
 | # | Title | Solution | Time | Space | Difficulty | Tag | Note |

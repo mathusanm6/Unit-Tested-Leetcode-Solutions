@@ -1,0 +1,17 @@
+problem:
+  number: 14
+  title: "Longest Common Prefix"
+  leetcode_url: "https://leetcode.com/problems/longest-common-prefix/"
+  difficulty: "easy"
+  tags: ["Tries"]
+
+solutions:
+  python: "problems/longest_common_prefix/longest_common_prefix.py"
+  cpp: "problems/longest_common_prefix/longest_common_prefix.cc"
+
+complexity:
+  time: "O(n * m)"
+  space: "O(n * m)"
+
+notes: ""
+readme_link: ""
