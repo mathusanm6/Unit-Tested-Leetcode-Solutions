@@ -1,0 +1,17 @@
+problem:
+  number: 6
+  title: "Zigzag Conversion"
+  leetcode_url: "https://leetcode.com/problems/zigzag-conversion/"
+  difficulty: "medium"
+  tags: ["Math & Geometry"]
+
+solutions:
+  python: "problems/zigzag_conversion/zigzag_conversion.py"
+  cpp: "problems/zigzag_conversion/zigzag_conversion.cc"
+
+complexity:
+  time: "O(n)"
+  space: "O(1)"
+
+notes: ""
+readme_link: ""
