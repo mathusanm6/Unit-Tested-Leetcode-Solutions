@@ -1,0 +1,17 @@
+problem:
+  number: 28
+  title: "Find the Index of the First Occurrence in a String"
+  leetcode_url: "https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/"
+  difficulty: "easy"
+  tags: ["Two Pointers"]
+
+solutions:
+  python: "problems/find_the_index_of_the_first_occurrence_in_a_string/find_the_index_of_the_first_occurrence_in_a_string.py"
+  cpp: "problems/find_the_index_of_the_first_occurrence_in_a_string/find_the_index_of_the_first_occurrence_in_a_string.cc"
+
+complexity:
+  time: "O(n * m)"
+  space: "O(1)"
+
+notes: ""
+readme_link: ""
