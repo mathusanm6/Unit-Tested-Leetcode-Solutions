@@ -3,7 +3,7 @@ problem:
   title: "Zigzag Conversion"
   leetcode_url: "https://leetcode.com/problems/zigzag-conversion/"
   difficulty: "medium"
-  tags: ["Math & Geometry"]
+  tags: ["Array / String"]
 
 solutions:
   python: "problems/zigzag_conversion/zigzag_conversion.py"

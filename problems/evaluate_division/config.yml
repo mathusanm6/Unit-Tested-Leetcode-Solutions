@@ -3,7 +3,7 @@ problem:
   title: "Evaluate Division"
   leetcode_url: "https://leetcode.com/problems/evaluate-division/"
   difficulty: "medium"
-  tags: ["Graphs"]
+  tags: ["Graph General"]
 
 solutions:
   python: "problems/evaluate_division/evaluate_division.py"

@@ -3,7 +3,7 @@ problem:
   title: "Best Time to Buy and Sell Stock II"
   leetcode_url: "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/"
   difficulty: "medium"
-  tags: ["1-D Dynamic Programming"]
+  tags: ["Array / String"]
 
 solutions:
   python: "problems/best_time_to_buy_and_sell_stock_ii/best_time_to_buy_and_sell_stock_ii.py"

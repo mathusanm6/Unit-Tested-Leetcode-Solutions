@@ -3,7 +3,7 @@ problem:
   title: "Product of Array Except Self"
   leetcode_url: "https://leetcode.com/problems/product-of-array-except-self/"
   difficulty: "medium"
-  tags: ["Arrays & Hashing"]
+  tags: ["Array / String"]
 
 solutions:
   python: "problems/product_of_array_except_self/product_of_array_except_self.py"

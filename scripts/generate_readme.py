@@ -107,8 +107,33 @@ class ReadmeGenerator:
         """Generate a markdown anchor from a tag name."""
         return tag.lower().replace(" ", "-").replace("&", "")
 
+    def normalize_solutions(self, config: dict[str, Any]) -> list[dict[str, Any]]:
+        """Normalize solutions configuration to a list of solution entries."""
+        solutions = config.get("solutions", {})
+        if isinstance(solutions, list):
+            return solutions
+        elif isinstance(solutions, dict):
+            complexity = config.get("complexity", {})
+            entry = {
+                "name": "",
+                "time": complexity.get("time", "N/A"),
+                "space": complexity.get("space", "N/A"),
+            }
+            entry.update(solutions)
+            return [entry]
+        return []
+
+    def format_solution_entry(self, entry: dict[str, Any]) -> str:
+        """Format solution links for a single solution variant."""
+        formatted = []
+        for key, path in entry.items():
+            if key not in ("name", "time", "space", "notes"):
+                lang_display = "C++" if key == "cpp" else key.capitalize()
+                formatted.append(f"[{lang_display}](./{path})")
+        return ", ".join(formatted)
+
     def format_solutions(self, solutions: dict[str, str]) -> str:
-        """Format solution links for the table."""
+        """Format solution links for the table (legacy helper)."""
         formatted_solutions = []
         for lang, path in solutions.items():
             lang_display = "C++" if lang == "cpp" else lang.capitalize()
@@ -164,27 +189,21 @@ class ReadmeGenerator:
 
             # Create table header
             table_header = (
-                "| # | Title | Solution | Time | Space | Difficulty | Tag | Note |"
+                "| # | Title | Difficulty | Approach | Solution | Time | Space | Note |"
             )
             table_divider = (
-                "|---|-------|----------|------|-------|------------|-----|------|"
+                "|---|-------|------------|----------|----------|------|-------|------|"
             )
             markdown_sections.extend([table_header, table_divider])
 
             # Add problem rows
             for config in problems:
                 problem = config["problem"]
-                solutions = config.get("solutions", {})
-                complexity = config.get("complexity", {})
+                solution_entries = self.normalize_solutions(config)
 
-                # Format the row
                 number = problem["number"]
                 title = f"[{problem['title']}]({problem['leetcode_url']})"
-                solution_links = self.format_solutions(solutions)
-                time_complexity = f"_{complexity.get('time', 'N/A')}_"
-                space_complexity = f"_{complexity.get('space', 'N/A')}_"
                 difficulty = problem["difficulty"].capitalize()
-                tags_display = ""  # Could show additional tags if needed
                 notes = config.get("notes", "")
 
                 # Add readme link if available
@@ -194,8 +213,17 @@ class ReadmeGenerator:
                     else:
                         notes = f"[Details]({config['readme_link']})"
 
-                row = f"| {number} | {title} | {solution_links} | {time_complexity} | {space_complexity} | {difficulty} | {tags_display} | {notes} |"
-                markdown_sections.append(row)
+                for idx, entry in enumerate(solution_entries):
+                    approach = entry.get("name", "").strip() or "—"
+                    solution_links = self.format_solution_entry(entry)
+                    time_complexity = f"_{entry.get('time', 'N/A')}_"
+                    space_complexity = f"_{entry.get('space', 'N/A')}_"
+
+                    if idx == 0:
+                        row = f"| {number} | {title} | {difficulty} | {approach} | {solution_links} | {time_complexity} | {space_complexity} | {notes} |"
+                    else:
+                        row = f"|  |  |  | {approach} | {solution_links} | {time_complexity} | {space_complexity} |  |"
+                    markdown_sections.append(row)
 
             markdown_sections.append("")
 
@@ -237,8 +265,6 @@ class ReadmeGenerator:
         # 1. The next top-level section that's NOT a tag section (## but not a tag name)
         # 2. End of file if no such section exists
 
-        available_tags = self.load_config("tags.yml").get("tags", [])
-
         # Start searching after the "## Algorithms" line
         search_start = start_idx + len(start_marker)
 
@@ -252,22 +278,21 @@ class ReadmeGenerator:
                 # No more sections found
                 break
 
-            # Extract the section title (everything after "## " until newline)
-            section_start = next_section + 4  # Skip "\n## "
-            section_end = content.find("\n", section_start)
-            if section_end == -1:
-                section_title = content[section_start:].strip()
-            else:
-                section_title = content[section_start:section_end].strip()
+            # Check if this next section contains a problem table
+            following_next = content.find("\n## ", next_section + 4)
+            section_chunk = (
+                content[next_section:following_next]
+                if following_next != -1
+                else content[next_section:]
+            )
 
-            # Check if this section title is NOT one of our algorithm tags
-            if section_title not in available_tags:
-                # This is a non-algorithm section, so algorithms content ends here
-                end_idx = next_section
-                break
+            if "| # | Title" in section_chunk or "|---|-------" in section_chunk:
+                pos = next_section + 4
+                continue
 
-            # Continue searching after this section
-            pos = next_section + 1
+            # Non-algorithm section found
+            end_idx = next_section
+            break
 
         # Preserve content after the algorithms section
         content_after = content[end_idx:] if end_idx < len(content) else ""

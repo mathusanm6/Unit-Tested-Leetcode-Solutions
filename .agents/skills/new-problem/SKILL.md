@@ -83,10 +83,11 @@ Build one language-neutral list of cases:
 - Use the user's provided sample tests. You may add common, verified edge cases (e.g. empty input, single element) if they pass against the user's solution, but **never pause to ask** the user "Do you want me to add extra edge cases?".
 - For in-place array problems returning length `k`: assert `k == expected_k` and `nums[:k] == expected_nums`. Verify determinism against the user's code first. Do not pause to ask how to compare unless the test fails.
 
-## Step 4 - Create the 7 files immediately
+## Step 4 - Create the files immediately
 
 Do not show a plan and wait for "Create it" confirmation. Immediately create:
 
+Single-solution problem (standard):
 ```
 problems/<snake>/
 ├── BUILD.bazel
@@ -98,8 +99,22 @@ problems/<snake>/
 └── <snake>_test.cc
 ```
 
+Multi-solution problem (when user provides multiple solutions for the problem):
+```
+problems/<snake>/
+├── BUILD.bazel            # leetcode_problem(variants = ["variant1", "variant2"])
+├── config.yml             # list of solutions with name, paths, complexities
+├── <snake>_<variant1>.py
+├── <snake>_<variant2>.py
+├── <snake>_test.py        # dynamically imports via LEETCODE_SOLUTION_MODULE
+├── <snake>.h              # common function declaration
+├── <snake>_<variant1>.cc
+├── <snake>_<variant2>.cc
+└── <snake>_test.cc        # shared tests (Bazel creates separate test binaries)
+```
+
 **Before writing any file, read `references/templates.md`.** It has the exact template for every
-file above, the `TreeNode` variant, and the mechanical code-adaptation rules (unwrap
+file above, the `TreeNode` variant, the multi-solution variants, and the mechanical code-adaptation rules (unwrap
 `class Solution`, type hints, includes, etc.). Follow it exactly.
 
 ## Step 5 - Verify

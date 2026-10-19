@@ -3,7 +3,7 @@ problem:
   title: "Roman to Integer"
   leetcode_url: "https://leetcode.com/problems/roman-to-integer/"
   difficulty: "easy"
-  tags: ["Arrays & Hashing"]
+  tags: ["Array / String"]
 
 solutions:
   python: "problems/roman_to_integer/roman_to_integer.py"

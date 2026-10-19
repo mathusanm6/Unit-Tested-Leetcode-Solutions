@@ -3,7 +3,7 @@ problem:
   title: "Rotate Array"
   leetcode_url: "https://leetcode.com/problems/rotate-array/"
   difficulty: "medium"
-  tags: ["Two Pointers"]
+  tags: ["Array / String"]
 
 solutions:
   python: "problems/rotate_array/rotate_array.py"

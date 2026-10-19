@@ -3,7 +3,7 @@ problem:
   title: "Remove Element"
   leetcode_url: "https://leetcode.com/problems/remove-element/"
   difficulty: "easy"
-  tags: ["Two Pointers"]
+  tags: ["Array / String"]
 
 solutions:
   python: "problems/remove_element/remove_element.py"

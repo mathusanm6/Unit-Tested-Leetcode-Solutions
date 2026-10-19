@@ -3,15 +3,19 @@ problem:
   title: "Two Sum"
   leetcode_url: "https://leetcode.com/problems/two-sum/"
   difficulty: "easy"
-  tags: ["Arrays & Hashing"]
+  tags: ["Hashmap"]
 
 solutions:
-  python: "problems/two_sum/two_sum.py"
-  cpp: "problems/two_sum/two_sum.cc"
-
-complexity:
-  time: "O(n)"
-  space: "O(n)"
+  - name: "Hash Map"
+    python: "problems/two_sum/two_sum_hash_map.py"
+    cpp: "problems/two_sum/two_sum_hash_map.cc"
+    time: "O(n)"
+    space: "O(n)"
+  - name: "Brute Force"
+    python: "problems/two_sum/two_sum_brute_force.py"
+    cpp: "problems/two_sum/two_sum_brute_force.cc"
+    time: "O(n^2)"
+    space: "O(1)"
 
 notes: ""
 readme_link: ""

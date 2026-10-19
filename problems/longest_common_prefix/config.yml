@@ -3,7 +3,7 @@ problem:
   title: "Longest Common Prefix"
   leetcode_url: "https://leetcode.com/problems/longest-common-prefix/"
   difficulty: "easy"
-  tags: ["Tries"]
+  tags: ["Array / String"]
 
 solutions:
   python: "problems/longest_common_prefix/longest_common_prefix.py"

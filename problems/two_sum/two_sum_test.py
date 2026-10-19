@@ -1,7 +1,13 @@
 """Test cases for the two_sum function."""
 
+import importlib
+import os
+
 import pytest
-from two_sum import twoSum
+
+_module_name = os.environ.get("LEETCODE_SOLUTION_MODULE", "two_sum_hash_map")
+_solution_mod = importlib.import_module(_module_name)
+twoSum = _solution_mod.twoSum
 
 
 @pytest.mark.parametrize(

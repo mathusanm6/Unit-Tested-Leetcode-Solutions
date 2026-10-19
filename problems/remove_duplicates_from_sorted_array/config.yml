@@ -3,7 +3,7 @@ problem:
   title: "Remove Duplicates from Sorted Array"
   leetcode_url: "https://leetcode.com/problems/remove-duplicates-from-sorted-array/"
   difficulty: "easy"
-  tags: ["Two Pointers"]
+  tags: ["Array / String"]
 
 solutions:
   python: "problems/remove_duplicates_from_sorted_array/remove_duplicates_from_sorted_array.py"

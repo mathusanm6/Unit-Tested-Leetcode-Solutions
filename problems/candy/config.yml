@@ -3,7 +3,7 @@ problem:
   title: "Candy"
   leetcode_url: "https://leetcode.com/problems/candy/"
   difficulty: "hard"
-  tags: ["Greedy"]
+  tags: ["Array / String"]
 
 solutions:
   python: "problems/candy/candy.py"

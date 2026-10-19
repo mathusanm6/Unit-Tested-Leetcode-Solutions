@@ -3,7 +3,7 @@ problem:
   title: "Trapping Rain Water"
   leetcode_url: "https://leetcode.com/problems/trapping-rain-water/"
   difficulty: "hard"
-  tags: ["Two Pointers"]
+  tags: ["Array / String"]
 
 solutions:
   python: "problems/trapping_rain_water/trapping_rain_water.py"
