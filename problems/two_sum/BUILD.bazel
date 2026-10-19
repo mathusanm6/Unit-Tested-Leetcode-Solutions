@@ -1,3 +1,8 @@
 load("//problems:defs.bzl", "leetcode_problem")
 
-leetcode_problem()
+leetcode_problem(
+    variants = [
+        "hash_map",
+        "brute_force",
+    ],
+)

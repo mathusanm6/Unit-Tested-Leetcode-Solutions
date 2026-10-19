@@ -3,7 +3,7 @@ problem:
   title: "Find the Index of the First Occurrence in a String"
   leetcode_url: "https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/"
   difficulty: "easy"
-  tags: ["Two Pointers"]
+  tags: ["Array / String"]
 
 solutions:
   python: "problems/find_the_index_of_the_first_occurrence_in_a_string/find_the_index_of_the_first_occurrence_in_a_string.py"

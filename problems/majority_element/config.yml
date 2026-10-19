@@ -3,7 +3,7 @@ problem:
   title: "Majority Element"
   leetcode_url: "https://leetcode.com/problems/majority-element/"
   difficulty: "easy"
-  tags: ["Arrays & Hashing"]
+  tags: ["Array / String"]
 
 solutions:
   python: "problems/majority_element/majority_element.py"

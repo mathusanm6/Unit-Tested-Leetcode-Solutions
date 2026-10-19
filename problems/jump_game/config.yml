@@ -3,7 +3,7 @@ problem:
   title: "Jump Game"
   leetcode_url: "https://leetcode.com/problems/jump-game/"
   difficulty: "medium"
-  tags: ["Greedy"]
+  tags: ["Array / String"]
 
 solutions:
   python: "problems/jump_game/jump_game.py"

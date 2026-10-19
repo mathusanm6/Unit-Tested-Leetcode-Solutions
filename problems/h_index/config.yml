@@ -3,7 +3,7 @@ problem:
   title: "H-Index"
   leetcode_url: "https://leetcode.com/problems/h-index/"
   difficulty: "medium"
-  tags: ["Arrays & Hashing"]
+  tags: ["Array / String"]
 
 solutions:
   python: "problems/h_index/h_index.py"

@@ -3,7 +3,7 @@ problem:
   title: "Group Anagrams"
   leetcode_url: "https://leetcode.com/problems/group-anagrams/"
   difficulty: "medium"
-  tags: ["Arrays & Hashing"]
+  tags: ["Hashmap"]
 
 solutions:
   python: "problems/group_anagrams/group_anagrams.py"

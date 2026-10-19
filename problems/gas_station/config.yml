@@ -3,7 +3,7 @@ problem:
   title: "Gas Station"
   leetcode_url: "https://leetcode.com/problems/gas-station/"
   difficulty: "medium"
-  tags: ["Greedy"]
+  tags: ["Array / String"]
 
 solutions:
   python: "problems/gas_station/gas_station.py"

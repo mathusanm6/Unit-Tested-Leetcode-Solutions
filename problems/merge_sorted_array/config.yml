@@ -3,7 +3,7 @@ problem:
   title: "Merge Sorted Array"
   leetcode_url: "https://leetcode.com/problems/merge-sorted-array/"
   difficulty: "easy"
-  tags: ["Two Pointers"]
+  tags: ["Array / String"]
 
 solutions:
   python: "problems/merge_sorted_array/merge_sorted_array.py"

@@ -15,8 +15,8 @@
 ### 📊 Repository Stats
 
 [![Last Commit](https://img.shields.io/github/last-commit/mathusanm6/LeetCode?style=for-the-badge&logo=git&logoColor=white&color=blue)](https://github.com/mathusanm6/LeetCode/commits/main)
-[![C++ Solutions](https://img.shields.io/badge/C%2B%2B%20Solutions-31-blue?style=for-the-badge&logo=cplusplus&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
-[![Python Solutions](https://img.shields.io/badge/Python%20Solutions-31-blue?style=for-the-badge&logo=python&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
+[![C++ Solutions](https://img.shields.io/badge/C%2B%2B%20Solutions-27-blue?style=for-the-badge&logo=cplusplus&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
+[![Python Solutions](https://img.shields.io/badge/Python%20Solutions-27-blue?style=for-the-badge&logo=python&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
 
 </div>
 
@@ -168,97 +168,74 @@ The GitHub Actions CI pipeline runs 4 focused workflows on both pull requests an
 
 This repository covers a comprehensive range of algorithmic patterns and data structures commonly found in technical interviews:
 
-- [Arrays & Hashing](#arrays--hashing)
+- [Array / String](#array-/-string)
 - [Two Pointers](#two-pointers)
 - [Sliding Window](#sliding-window)
-- [Stack](#stack)
-- [Binary Search](#binary-search)
-- [Linked List](#linked-list)
-- [Trees](#trees)
-- [Heap / Priority Queue](#heap-/-priority-queue)
-- [Backtracking](#backtracking)
-- [Tries](#tries)
-- [Graphs](#graphs)
-- [Advanced Graphs](#advanced-graphs)
-- [1-D Dynamic Programming](#1-d-dynamic-programming)
-- [2-D Dynamic Programming](#2-d-dynamic-programming)
-- [Greedy](#greedy)
+- [Matrix](#matrix)
+- [Hashmap](#hashmap)
 - [Intervals](#intervals)
-- [Math & Geometry](#math--geometry)
+- [Stack](#stack)
+- [Linked List](#linked-list)
+- [Binary Tree General](#binary-tree-general)
+- [Binary Tree BFS](#binary-tree-bfs)
+- [Binary Search Tree](#binary-search-tree)
+- [Graph General](#graph-general)
+- [Graph BFS](#graph-bfs)
+- [Trie](#trie)
+- [Backtracking](#backtracking)
+- [Divide & Conquer](#divide--conquer)
+- [Kadane's Algorithm](#kadane's-algorithm)
+- [Binary Search](#binary-search)
+- [Heap](#heap)
 - [Bit Manipulation](#bit-manipulation)
+- [Math](#math)
+- [1D DP](#1d-dp)
+- [Multidimensional DP](#multidimensional-dp)
 
-## Arrays & Hashing
+## Array / String
 
-| # | Title | Solution | Time | Space | Difficulty | Tag | Note |
-|---|-------|----------|------|-------|------------|-----|------|
-| 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | [Python](./problems/two_sum/two_sum.py), [C++](./problems/two_sum/two_sum.cc) | _O(n)_ | _O(n)_ | Easy |  |  |
-| 13 | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | [Python](./problems/roman_to_integer/roman_to_integer.py), [C++](./problems/roman_to_integer/roman_to_integer.cc) | _O(n)_ | _O(1)_ | Easy |  |  |
-| 49 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) | [Python](./problems/group_anagrams/group_anagrams.py), [C++](./problems/group_anagrams/group_anagrams.cc) | _O(n * k log k)_ | _O(n)_ | Medium |  | For C++, the complexity is _O(n * k log k)_, where n is the number of strings and k is the maximum length of a string. But for Python, the complexity is _O(n * k)_ as there is no sorting involved. |
-| 58 | [Length of Last Word](https://leetcode.com/problems/length-of-last-word/) | [Python](./problems/length_of_last_word/length_of_last_word.py), [C++](./problems/length_of_last_word/length_of_last_word.cc) | _O(n)_ | _O(1)_ | Easy |  | For C++, space complexity is _O(1)_ as we traverse the string in-place from the end. For Python, it is _O(n)_ due to splitting the string into words. |
-| 169 | [Majority Element](https://leetcode.com/problems/majority-element/) | [Python](./problems/majority_element/majority_element.py), [C++](./problems/majority_element/majority_element.cc) | _O(n)_ | _O(1)_ | Easy |  | Using Boyer-Moore Majority Vote Algorithm. |
-| 217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | [Python](./problems/contains_duplicate/contains_duplicate.py), [C++](./problems/contains_duplicate/contains_duplicate.cc) | _O(n)_ | _O(n)_ | Easy |  |  |
-| 238 | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | [Python](./problems/product_of_array_except_self/product_of_array_except_self.py), [C++](./problems/product_of_array_except_self/product_of_array_except_self.cc) | _O(n)_ | _O(1)_ | Medium |  | We are using prefix sum's logic. |
-| 274 | [H-Index](https://leetcode.com/problems/h-index/) | [Python](./problems/h_index/h_index.py), [C++](./problems/h_index/h_index.cc) | _O(n log n)_ | _O(1)_ | Medium |  |  |
-| 380 | [Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/) | [Python](./problems/insert_delete_getrandom_o1/insert_delete_getrandom_o1.py), [C++](./problems/insert_delete_getrandom_o1/insert_delete_getrandom_o1.cc) | _O(1)_ | _O(n)_ | Medium |  |  |
-| 2303 | [Calculate Amount Paid In Taxes](https://leetcode.com/problems/calculate-amount-paid-in-taxes/) | [Python](./problems/calculate_amount_paid_in_taxes/calculate_amount_paid_in_taxes.py), [C++](./problems/calculate_amount_paid_in_taxes/calculate_amount_paid_in_taxes.cc) | _O(n)_ | _O(1)_ | Easy |  |  |
+| # | Title | Difficulty | Approach | Solution | Time | Space | Note |
+|---|-------|------------|----------|----------|------|-------|------|
+| 6 | [Zigzag Conversion](https://leetcode.com/problems/zigzag-conversion/) | Medium | — | [Python](./problems/zigzag_conversion/zigzag_conversion.py), [C++](./problems/zigzag_conversion/zigzag_conversion.cc) | _O(n)_ | _O(1)_ |  |
+| 12 | [Integer to Roman](https://leetcode.com/problems/integer-to-roman/) | Medium | — | [Python](./problems/integer_to_roman/integer_to_roman.py), [C++](./problems/integer_to_roman/integer_to_roman.cc) | _O(1)_ | _O(1)_ |  |
+| 13 | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | Easy | — | [Python](./problems/roman_to_integer/roman_to_integer.py), [C++](./problems/roman_to_integer/roman_to_integer.cc) | _O(n)_ | _O(1)_ |  |
+| 14 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | Easy | — | [Python](./problems/longest_common_prefix/longest_common_prefix.py), [C++](./problems/longest_common_prefix/longest_common_prefix.cc) | _O(n * m)_ | _O(n * m)_ |  |
+| 26 | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | Easy | — | [Python](./problems/remove_duplicates_from_sorted_array/remove_duplicates_from_sorted_array.py), [C++](./problems/remove_duplicates_from_sorted_array/remove_duplicates_from_sorted_array.cc) | _O(n)_ | _O(1)_ |  |
+| 27 | [Remove Element](https://leetcode.com/problems/remove-element/) | Easy | — | [Python](./problems/remove_element/remove_element.py), [C++](./problems/remove_element/remove_element.cc) | _O(n)_ | _O(1)_ |  |
+| 28 | [Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | Easy | — | [Python](./problems/find_the_index_of_the_first_occurrence_in_a_string/find_the_index_of_the_first_occurrence_in_a_string.py), [C++](./problems/find_the_index_of_the_first_occurrence_in_a_string/find_the_index_of_the_first_occurrence_in_a_string.cc) | _O(n * m)_ | _O(1)_ |  |
+| 42 | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | Hard | — | [Python](./problems/trapping_rain_water/trapping_rain_water.py), [C++](./problems/trapping_rain_water/trapping_rain_water.cc) | _O(n)_ | _O(1)_ |  |
+| 45 | [Jump Game II](https://leetcode.com/problems/jump-game-ii/) | Medium | — | [Python](./problems/jump_game_ii/jump_game_ii.py), [C++](./problems/jump_game_ii/jump_game_ii.cc) | _O(n)_ | _O(1)_ |  |
+| 55 | [Jump Game](https://leetcode.com/problems/jump-game/) | Medium | — | [Python](./problems/jump_game/jump_game.py), [C++](./problems/jump_game/jump_game.cc) | _O(n)_ | _O(1)_ |  |
+| 58 | [Length of Last Word](https://leetcode.com/problems/length-of-last-word/) | Easy | — | [Python](./problems/length_of_last_word/length_of_last_word.py), [C++](./problems/length_of_last_word/length_of_last_word.cc) | _O(n)_ | _O(1)_ | For C++, space complexity is _O(1)_ as we traverse the string in-place from the end. For Python, it is _O(n)_ due to splitting the string into words. |
+| 80 | [Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/) | Medium | — | [Python](./problems/remove_duplicates_from_sorted_array_ii/remove_duplicates_from_sorted_array_ii.py), [C++](./problems/remove_duplicates_from_sorted_array_ii/remove_duplicates_from_sorted_array_ii.cc) | _O(n)_ | _O(1)_ |  |
+| 88 | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) | Easy | — | [Python](./problems/merge_sorted_array/merge_sorted_array.py), [C++](./problems/merge_sorted_array/merge_sorted_array.cc) | _O(m + n)_ | _O(1)_ |  |
+| 121 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | Easy | — | [Python](./problems/best_time_to_buy_and_sell_stock/best_time_to_buy_and_sell_stock.py), [C++](./problems/best_time_to_buy_and_sell_stock/best_time_to_buy_and_sell_stock.cc) | _O(n)_ | _O(1)_ |  |
+| 122 | [Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/) | Medium | — | [Python](./problems/best_time_to_buy_and_sell_stock_ii/best_time_to_buy_and_sell_stock_ii.py), [C++](./problems/best_time_to_buy_and_sell_stock_ii/best_time_to_buy_and_sell_stock_ii.cc) | _O(n)_ | _O(1)_ |  |
+| 134 | [Gas Station](https://leetcode.com/problems/gas-station/) | Medium | — | [Python](./problems/gas_station/gas_station.py), [C++](./problems/gas_station/gas_station.cc) | _O(n)_ | _O(1)_ |  |
+| 135 | [Candy](https://leetcode.com/problems/candy/) | Hard | — | [Python](./problems/candy/candy.py), [C++](./problems/candy/candy.cc) | _O(n)_ | _O(n)_ | We do it in two passes: one left to right and other right to left. |
+| 151 | [Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/) | Medium | — | [Python](./problems/reverse_words_in_a_string/reverse_words_in_a_string.py), [C++](./problems/reverse_words_in_a_string/reverse_words_in_a_string.cc) | _O(n)_ | _O(1)_ | For C++, space complexity is _O(1)_ auxiliary space by modifying the string in-place. For Python, space complexity is _O(n)_ due to splitting the string into words. |
+| 169 | [Majority Element](https://leetcode.com/problems/majority-element/) | Easy | — | [Python](./problems/majority_element/majority_element.py), [C++](./problems/majority_element/majority_element.cc) | _O(n)_ | _O(1)_ | Using Boyer-Moore Majority Vote Algorithm. |
+| 189 | [Rotate Array](https://leetcode.com/problems/rotate-array/) | Medium | — | [Python](./problems/rotate_array/rotate_array.py), [C++](./problems/rotate_array/rotate_array.cc) | _O(n)_ | _O(1)_ |  |
+| 238 | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | Medium | — | [Python](./problems/product_of_array_except_self/product_of_array_except_self.py), [C++](./problems/product_of_array_except_self/product_of_array_except_self.cc) | _O(n)_ | _O(1)_ | We are using prefix sum's logic. |
+| 274 | [H-Index](https://leetcode.com/problems/h-index/) | Medium | — | [Python](./problems/h_index/h_index.py), [C++](./problems/h_index/h_index.cc) | _O(n log n)_ | _O(1)_ |  |
+| 380 | [Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/) | Medium | — | [Python](./problems/insert_delete_getrandom_o1/insert_delete_getrandom_o1.py), [C++](./problems/insert_delete_getrandom_o1/insert_delete_getrandom_o1.cc) | _O(1)_ | _O(n)_ |  |
 
 ## Two Pointers
 
-| # | Title | Solution | Time | Space | Difficulty | Tag | Note |
-|---|-------|----------|------|-------|------------|-----|------|
-| 26 | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | [Python](./problems/remove_duplicates_from_sorted_array/remove_duplicates_from_sorted_array.py), [C++](./problems/remove_duplicates_from_sorted_array/remove_duplicates_from_sorted_array.cc) | _O(n)_ | _O(1)_ | Easy |  |  |
-| 27 | [Remove Element](https://leetcode.com/problems/remove-element/) | [Python](./problems/remove_element/remove_element.py), [C++](./problems/remove_element/remove_element.cc) | _O(n)_ | _O(1)_ | Easy |  |  |
-| 28 | [Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | [Python](./problems/find_the_index_of_the_first_occurrence_in_a_string/find_the_index_of_the_first_occurrence_in_a_string.py), [C++](./problems/find_the_index_of_the_first_occurrence_in_a_string/find_the_index_of_the_first_occurrence_in_a_string.cc) | _O(n * m)_ | _O(1)_ | Easy |  |  |
-| 42 | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | [Python](./problems/trapping_rain_water/trapping_rain_water.py), [C++](./problems/trapping_rain_water/trapping_rain_water.cc) | _O(n)_ | _O(1)_ | Hard |  |  |
-| 80 | [Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/) | [Python](./problems/remove_duplicates_from_sorted_array_ii/remove_duplicates_from_sorted_array_ii.py), [C++](./problems/remove_duplicates_from_sorted_array_ii/remove_duplicates_from_sorted_array_ii.cc) | _O(n)_ | _O(1)_ | Medium |  |  |
-| 88 | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) | [Python](./problems/merge_sorted_array/merge_sorted_array.py), [C++](./problems/merge_sorted_array/merge_sorted_array.cc) | _O(m + n)_ | _O(1)_ | Easy |  |  |
-| 125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | [Python](./problems/valid_palindrome/valid_palindrome.py), [C++](./problems/valid_palindrome/valid_palindrome.cc) | _O(n)_ | _O(1)_ | Easy |  |  |
-| 151 | [Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/) | [Python](./problems/reverse_words_in_a_string/reverse_words_in_a_string.py), [C++](./problems/reverse_words_in_a_string/reverse_words_in_a_string.cc) | _O(n)_ | _O(1)_ | Medium |  | For C++, space complexity is _O(1)_ auxiliary space by modifying the string in-place. For Python, space complexity is _O(n)_ due to splitting the string into words. |
-| 189 | [Rotate Array](https://leetcode.com/problems/rotate-array/) | [Python](./problems/rotate_array/rotate_array.py), [C++](./problems/rotate_array/rotate_array.cc) | _O(n)_ | _O(1)_ | Medium |  |  |
+| # | Title | Difficulty | Approach | Solution | Time | Space | Note |
+|---|-------|------------|----------|----------|------|-------|------|
+| 125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | Easy | — | [Python](./problems/valid_palindrome/valid_palindrome.py), [C++](./problems/valid_palindrome/valid_palindrome.cc) | _O(n)_ | _O(1)_ |  |
 
-## Trees
+## Hashmap
 
-| # | Title | Solution | Time | Space | Difficulty | Tag | Note |
-|---|-------|----------|------|-------|------------|-----|------|
-| 2313 | [Minimum Flips in Binary Tree to Get Result](https://leetcode.com/problems/minimum-flips-in-binary-tree-to-get-result/) | [Python](./problems/minimum_flips_in_binary_tree_to_get_result/minimum_flips_in_binary_tree_to_get_result.py), [C++](./problems/minimum_flips_in_binary_tree_to_get_result/minimum_flips_in_binary_tree_to_get_result.cc) | _O(n)_ | _O(1)_ | Hard |  | _n_ is the number of nodes in the binary tree. |
+| # | Title | Difficulty | Approach | Solution | Time | Space | Note |
+|---|-------|------------|----------|----------|------|-------|------|
+| 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | Easy | Hash Map | [Python](./problems/two_sum/two_sum_hash_map.py), [C++](./problems/two_sum/two_sum_hash_map.cc) | _O(n)_ | _O(n)_ |  |
+|  |  |  | Brute Force | [Python](./problems/two_sum/two_sum_brute_force.py), [C++](./problems/two_sum/two_sum_brute_force.cc) | _O(n^2)_ | _O(1)_ |  |
+| 49 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) | Medium | — | [Python](./problems/group_anagrams/group_anagrams.py), [C++](./problems/group_anagrams/group_anagrams.cc) | _O(n * k log k)_ | _O(n)_ | For C++, the complexity is _O(n * k log k)_, where n is the number of strings and k is the maximum length of a string. But for Python, the complexity is _O(n * k)_ as there is no sorting involved. |
 
-## Backtracking
+## Graph General
 
-| # | Title | Solution | Time | Space | Difficulty | Tag | Note |
-|---|-------|----------|------|-------|------------|-----|------|
-| 1087 | [Brace Expansion](https://leetcode.com/problems/brace-expansion/) | [Python](./problems/brace_expansion/brace_expansion.py), [C++](./problems/brace_expansion/brace_expansion.cc) | _O(M^K + M log M)_ | _O(M^K)_ | Medium |  | M = max choices per brace set, K = number of brace sets. M^K for generating combinations, M log M for sorting. |
-
-## Tries
-
-| # | Title | Solution | Time | Space | Difficulty | Tag | Note |
-|---|-------|----------|------|-------|------------|-----|------|
-| 14 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | [Python](./problems/longest_common_prefix/longest_common_prefix.py), [C++](./problems/longest_common_prefix/longest_common_prefix.cc) | _O(n * m)_ | _O(n * m)_ | Easy |  |  |
-
-## Graphs
-
-| # | Title | Solution | Time | Space | Difficulty | Tag | Note |
-|---|-------|----------|------|-------|------------|-----|------|
-| 399 | [Evaluate Division](https://leetcode.com/problems/evaluate-division/) | [Python](./problems/evaluate_division/evaluate_division.py), [C++](./problems/evaluate_division/evaluate_division.cc) | _O(N + M)_ | _O(N)_ | Medium |  | N = number of equations, M = number of queries. |
-
-## 1-D Dynamic Programming
-
-| # | Title | Solution | Time | Space | Difficulty | Tag | Note |
-|---|-------|----------|------|-------|------------|-----|------|
-| 122 | [Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/) | [Python](./problems/best_time_to_buy_and_sell_stock_ii/best_time_to_buy_and_sell_stock_ii.py), [C++](./problems/best_time_to_buy_and_sell_stock_ii/best_time_to_buy_and_sell_stock_ii.cc) | _O(n)_ | _O(1)_ | Medium |  |  |
-
-## Greedy
-
-| # | Title | Solution | Time | Space | Difficulty | Tag | Note |
-|---|-------|----------|------|-------|------------|-----|------|
-| 12 | [Integer to Roman](https://leetcode.com/problems/integer-to-roman/) | [Python](./problems/integer_to_roman/integer_to_roman.py), [C++](./problems/integer_to_roman/integer_to_roman.cc) | _O(1)_ | _O(1)_ | Medium |  |  |
-| 45 | [Jump Game II](https://leetcode.com/problems/jump-game-ii/) | [Python](./problems/jump_game_ii/jump_game_ii.py), [C++](./problems/jump_game_ii/jump_game_ii.cc) | _O(n)_ | _O(1)_ | Medium |  |  |
-| 55 | [Jump Game](https://leetcode.com/problems/jump-game/) | [Python](./problems/jump_game/jump_game.py), [C++](./problems/jump_game/jump_game.cc) | _O(n)_ | _O(1)_ | Medium |  |  |
-| 121 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | [Python](./problems/best_time_to_buy_and_sell_stock/best_time_to_buy_and_sell_stock.py), [C++](./problems/best_time_to_buy_and_sell_stock/best_time_to_buy_and_sell_stock.cc) | _O(n)_ | _O(1)_ | Easy |  |  |
-| 134 | [Gas Station](https://leetcode.com/problems/gas-station/) | [Python](./problems/gas_station/gas_station.py), [C++](./problems/gas_station/gas_station.cc) | _O(n)_ | _O(1)_ | Medium |  |  |
-| 135 | [Candy](https://leetcode.com/problems/candy/) | [Python](./problems/candy/candy.py), [C++](./problems/candy/candy.cc) | _O(n)_ | _O(n)_ | Hard |  | We do it in two passes: one left to right and other right to left. |
-
-## Math & Geometry
-
-| # | Title | Solution | Time | Space | Difficulty | Tag | Note |
-|---|-------|----------|------|-------|------------|-----|------|
-| 6 | [Zigzag Conversion](https://leetcode.com/problems/zigzag-conversion/) | [Python](./problems/zigzag_conversion/zigzag_conversion.py), [C++](./problems/zigzag_conversion/zigzag_conversion.cc) | _O(n)_ | _O(1)_ | Medium |  |  |
+| # | Title | Difficulty | Approach | Solution | Time | Space | Note |
+|---|-------|------------|----------|----------|------|-------|------|
+| 399 | [Evaluate Division](https://leetcode.com/problems/evaluate-division/) | Medium | — | [Python](./problems/evaluate_division/evaluate_division.py), [C++](./problems/evaluate_division/evaluate_division.cc) | _O(N + M)_ | _O(N)_ | N = number of equations, M = number of queries. |
