@@ -6,16 +6,16 @@ problem:
   tags: ["Array / String"]
 
 solutions:
-  - name: "Cycle Math"
-    python: "problems/zigzag_conversion/zigzag_conversion_cycle_math.py"
-    cpp: "problems/zigzag_conversion/zigzag_conversion_cycle_math.cc"
-    time: "O(n)"
-    space: "O(1)"
   - name: "Row Buckets"
     python: "problems/zigzag_conversion/zigzag_conversion_row_buckets.py"
     cpp: "problems/zigzag_conversion/zigzag_conversion_row_buckets.cc"
     time: "O(n)"
     space: "O(n)"
+  - name: "Math"
+    python: "problems/zigzag_conversion/zigzag_conversion_math.py"
+    cpp: "problems/zigzag_conversion/zigzag_conversion_math.cc"
+    time: "O(n)"
+    space: "O(1)"
 
 notes: ""
 readme_link: ""
