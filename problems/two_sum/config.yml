@@ -6,16 +6,16 @@ problem:
   tags: ["Hashmap"]
 
 solutions:
-  - name: "Hash Map"
-    python: "problems/two_sum/two_sum_hash_map.py"
-    cpp: "problems/two_sum/two_sum_hash_map.cc"
-    time: "O(n)"
-    space: "O(n)"
   - name: "Brute Force"
     python: "problems/two_sum/two_sum_brute_force.py"
     cpp: "problems/two_sum/two_sum_brute_force.cc"
     time: "O(n^2)"
     space: "O(1)"
+  - name: "Hash Map"
+    python: "problems/two_sum/two_sum_hash_map.py"
+    cpp: "problems/two_sum/two_sum_hash_map.cc"
+    time: "O(n)"
+    space: "O(n)"
 
 notes: ""
 readme_link: ""

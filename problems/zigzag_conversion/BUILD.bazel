@@ -2,7 +2,7 @@ load("//problems:defs.bzl", "leetcode_problem")
 
 leetcode_problem(
     variants = [
-        "cycle_math",
         "row_buckets",
+        "math",
     ],
 )
