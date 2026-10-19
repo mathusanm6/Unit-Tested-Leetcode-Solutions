@@ -196,7 +196,8 @@ This repository covers a comprehensive range of algorithmic patterns and data st
 
 | # | Title | Difficulty | Approach | Solution | Time | Space | Note |
 |---|-------|------------|----------|----------|------|-------|------|
-| 6 | [Zigzag Conversion](https://leetcode.com/problems/zigzag-conversion/) | Medium | — | [Python](./problems/zigzag_conversion/zigzag_conversion.py), [C++](./problems/zigzag_conversion/zigzag_conversion.cc) | _O(n)_ | _O(1)_ |  |
+| 6 | [Zigzag Conversion](https://leetcode.com/problems/zigzag-conversion/) | Medium | Cycle Math | [Python](./problems/zigzag_conversion/zigzag_conversion_cycle_math.py), [C++](./problems/zigzag_conversion/zigzag_conversion_cycle_math.cc) | _O(n)_ | _O(1)_ |  |
+|  |  |  | Row Buckets | [Python](./problems/zigzag_conversion/zigzag_conversion_row_buckets.py), [C++](./problems/zigzag_conversion/zigzag_conversion_row_buckets.cc) | _O(n)_ | _O(n)_ |  |
 | 12 | [Integer to Roman](https://leetcode.com/problems/integer-to-roman/) | Medium | — | [Python](./problems/integer_to_roman/integer_to_roman.py), [C++](./problems/integer_to_roman/integer_to_roman.cc) | _O(1)_ | _O(1)_ |  |
 | 13 | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | Easy | — | [Python](./problems/roman_to_integer/roman_to_integer.py), [C++](./problems/roman_to_integer/roman_to_integer.cc) | _O(n)_ | _O(1)_ |  |
 | 14 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | Easy | — | [Python](./problems/longest_common_prefix/longest_common_prefix.py), [C++](./problems/longest_common_prefix/longest_common_prefix.cc) | _O(n * m)_ | _O(n * m)_ |  |

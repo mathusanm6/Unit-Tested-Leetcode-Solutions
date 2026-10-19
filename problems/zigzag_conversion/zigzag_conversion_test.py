@@ -1,7 +1,15 @@
 """Test cases for the convert function."""
 
+import importlib
+import os
+
 import pytest
-from zigzag_conversion import convert
+
+_module_name = os.environ.get(
+    "LEETCODE_SOLUTION_MODULE", "zigzag_conversion_cycle_math"
+)
+_solution_mod = importlib.import_module(_module_name)
+convert = _solution_mod.convert
 
 
 @pytest.mark.parametrize(
