@@ -1,0 +1,16 @@
+problem:
+  number: 68
+  title: "Text Justification"
+  leetcode_url: "https://leetcode.com/problems/text-justification/"
+  difficulty: "hard"
+  tags: ["Array / String"]
+
+solutions:
+  - name: "Greedy"
+    python: "problems/text_justification/text_justification.py"
+    cpp: "problems/text_justification/text_justification.cc"
+    time: "O(k * maxWidth), where k is the number of lines"
+    space: "O(maxWidth)"
+
+notes: ""
+readme_link: ""

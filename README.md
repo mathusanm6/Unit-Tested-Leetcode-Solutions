@@ -15,8 +15,8 @@
 ### 📊 Repository Stats
 
 [![Last Commit](https://img.shields.io/github/last-commit/mathusanm6/LeetCode?style=for-the-badge&logo=git&logoColor=white&color=blue)](https://github.com/mathusanm6/LeetCode/commits/main)
-[![C++ Solutions](https://img.shields.io/badge/C%2B%2B%20Solutions-27-blue?style=for-the-badge&logo=cplusplus&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
-[![Python Solutions](https://img.shields.io/badge/Python%20Solutions-27-blue?style=for-the-badge&logo=python&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
+[![C++ Solutions](https://img.shields.io/badge/C%2B%2B%20Solutions-28-blue?style=for-the-badge&logo=cplusplus&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
+[![Python Solutions](https://img.shields.io/badge/Python%20Solutions-28-blue?style=for-the-badge&logo=python&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
 
 </div>
 
@@ -217,6 +217,7 @@ This repository covers a comprehensive range of algorithmic patterns and data st
 | 55 | [Jump Game](https://leetcode.com/problems/jump-game/) | Medium | Dynamic Programming | [Python](./problems/jump_game/jump_game_dynamic_programming.py), [C++](./problems/jump_game/jump_game_dynamic_programming.cc) | _O(n^2)_ | _O(n)_ |  |
 |  |  |  | Greedy | [Python](./problems/jump_game/jump_game_greedy.py), [C++](./problems/jump_game/jump_game_greedy.cc) | _O(n)_ | _O(1)_ |  |
 | 58 | [Length of Last Word](https://leetcode.com/problems/length-of-last-word/) | Easy | String Traversal | [Python](./problems/length_of_last_word/length_of_last_word.py), [C++](./problems/length_of_last_word/length_of_last_word.cc) | _O(n)_ | _O(1)_ |  |
+| 68 | [Text Justification](https://leetcode.com/problems/text-justification/) | Hard | Greedy | [Python](./problems/text_justification/text_justification.py), [C++](./problems/text_justification/text_justification.cc) | _O(k * maxWidth), where k is the number of lines_ | _O(maxWidth)_ |  |
 | 80 | [Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/) | Medium | Two Pointers | [Python](./problems/remove_duplicates_from_sorted_array_ii/remove_duplicates_from_sorted_array_ii.py), [C++](./problems/remove_duplicates_from_sorted_array_ii/remove_duplicates_from_sorted_array_ii.cc) | _O(n)_ | _O(1)_ |  |
 | 88 | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) | Easy | Two Pointers | [Python](./problems/merge_sorted_array/merge_sorted_array.py), [C++](./problems/merge_sorted_array/merge_sorted_array.cc) | _O(m + n)_ | _O(1)_ |  |
 | 121 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | Easy | Dynamic Programming | [Python](./problems/best_time_to_buy_and_sell_stock/best_time_to_buy_and_sell_stock_dynamic_programming.py), [C++](./problems/best_time_to_buy_and_sell_stock/best_time_to_buy_and_sell_stock_dynamic_programming.cc) | _O(n)_ | _O(1)_ |  |
