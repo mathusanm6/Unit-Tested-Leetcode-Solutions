@@ -1,7 +1,15 @@
 """Test cases for the canJump function."""
 
+import importlib
+import os
+
 import pytest
-from jump_game import canJump
+
+_module_name = os.environ.get(
+    "LEETCODE_SOLUTION_MODULE", "jump_game_dynamic_programming"
+)
+_solution_mod = importlib.import_module(_module_name)
+canJump = _solution_mod.canJump
 
 
 @pytest.mark.parametrize(
