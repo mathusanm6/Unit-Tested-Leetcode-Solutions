@@ -51,6 +51,30 @@ INSTANTIATE_TEST_SUITE_P(
             .haystack = "mississippi",
             .needle = "issip",
             .expected = 4,
+        },
+        FindTheIndexOfTheFirstOccurrenceInAStringCase{
+            .test_name = "EmptyNeedle",
+            .haystack = "hello",
+            .needle = "",
+            .expected = 0,
+        },
+        FindTheIndexOfTheFirstOccurrenceInAStringCase{
+            .test_name = "RepeatedCharacters",
+            .haystack = "mississippi",
+            .needle = "pi",
+            .expected = 9,
+        },
+        FindTheIndexOfTheFirstOccurrenceInAStringCase{
+            .test_name = "PartialMatchBacktrack",
+            .haystack = "aabaaabaaac",
+            .needle = "aabaaac",
+            .expected = 4,
+        },
+        FindTheIndexOfTheFirstOccurrenceInAStringCase{
+            .test_name = "RepeatingPattern",
+            .haystack = "ababcabcabababd",
+            .needle = "ababd",
+            .expected = 10,
         }),
     [](const ::testing::TestParamInfo<FindTheIndexOfTheFirstOccurrenceInAStringCase>& info) {
         return info.param.test_name;
