@@ -6,12 +6,16 @@ problem:
   tags: ["Array / String"]
 
 solutions:
-  python: "problems/jump_game_ii/jump_game_ii.py"
-  cpp: "problems/jump_game_ii/jump_game_ii.cc"
-
-complexity:
-  time: "O(n)"
-  space: "O(1)"
+  - name: "Dynamic Programming"
+    python: "problems/jump_game_ii/jump_game_ii_dynamic_programming.py"
+    cpp: "problems/jump_game_ii/jump_game_ii_dynamic_programming.cc"
+    time: "O(n^2)"
+    space: "O(n)"
+  - name: "Greedy"
+    python: "problems/jump_game_ii/jump_game_ii_greedy.py"
+    cpp: "problems/jump_game_ii/jump_game_ii_greedy.cc"
+    time: "O(n)"
+    space: "O(1)"
 
 notes: ""
 readme_link: ""
