@@ -6,12 +6,11 @@ problem:
   tags: ["Array / String"]
 
 solutions:
-  python: "problems/integer_to_roman/integer_to_roman.py"
-  cpp: "problems/integer_to_roman/integer_to_roman.cc"
-
-complexity:
-  time: "O(1)"
-  space: "O(1)"
+  - name: "Math"
+    python: "problems/integer_to_roman/integer_to_roman.py"
+    cpp: "problems/integer_to_roman/integer_to_roman.cc"
+    time: "O(1)"
+    space: "O(1)"
 
 notes: ""
 readme_link: ""
