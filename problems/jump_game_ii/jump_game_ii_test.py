@@ -1,7 +1,15 @@
 """Test cases for the jump function."""
 
+import importlib
+import os
+
 import pytest
-from jump_game_ii import jump
+
+_module_name = os.environ.get(
+    "LEETCODE_SOLUTION_MODULE", "jump_game_ii_dynamic_programming"
+)
+_solution_mod = importlib.import_module(_module_name)
+jump = _solution_mod.jump
 
 
 @pytest.mark.parametrize(
@@ -17,5 +25,5 @@ from jump_game_ii import jump
         "single_element",
     ],
 )
-def test_jump(nums, expected):
+def test_jump(nums: list[int], expected: int) -> None:
     assert jump(nums) == expected

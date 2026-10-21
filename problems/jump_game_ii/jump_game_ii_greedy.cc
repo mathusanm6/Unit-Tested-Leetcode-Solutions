@@ -1,6 +1,6 @@
-#include "jump_game_ii.h"
 #include <algorithm>
 #include <vector>
+#include "jump_game_ii.h"
 
 int jump(std::vector<int> &nums) {
     int res = 0;
