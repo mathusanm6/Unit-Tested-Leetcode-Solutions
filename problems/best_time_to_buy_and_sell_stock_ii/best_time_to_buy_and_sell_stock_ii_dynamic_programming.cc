@@ -4,6 +4,9 @@
 #include <vector>
 
 int maxProfit(const std::vector<int>& prices) {
+    if (prices.empty()) {
+        return 0;
+    }
     int hold = -prices[0];
     int nextHold = 0;
     int sell = 0;
