@@ -6,12 +6,26 @@ problem:
   tags: ["Array / String"]
 
 solutions:
-  python: "problems/longest_common_prefix/longest_common_prefix.py"
-  cpp: "problems/longest_common_prefix/longest_common_prefix.cc"
-
-complexity:
-  time: "O(n * m)"
-  space: "O(n * m)"
+  - name: "Vertical Scanning"
+    python: "problems/longest_common_prefix/longest_common_prefix_vertical_scanning.py"
+    cpp: "problems/longest_common_prefix/longest_common_prefix_vertical_scanning.cc"
+    time: "O(n * m)"
+    space: "O(1)"
+  - name: "Horizontal Scanning"
+    python: "problems/longest_common_prefix/longest_common_prefix_horizontal_scanning.py"
+    cpp: "problems/longest_common_prefix/longest_common_prefix_horizontal_scanning.cc"
+    time: "O(n * m)"
+    space: "O(1)"
+  - name: "Min / Max Lexicographical"
+    python: "problems/longest_common_prefix/longest_common_prefix_min_max.py"
+    cpp: "problems/longest_common_prefix/longest_common_prefix_min_max.cc"
+    time: "O(n * m)"
+    space: "O(1)"
+  - name: "Trie"
+    python: "problems/longest_common_prefix/longest_common_prefix_trie.py"
+    cpp: "problems/longest_common_prefix/longest_common_prefix_trie.cc"
+    time: "O(n * m)"
+    space: "O(n * m)"
 
 notes: ""
 readme_link: ""

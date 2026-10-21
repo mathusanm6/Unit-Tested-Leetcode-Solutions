@@ -1,6 +1,12 @@
 load("//problems:defs.bzl", "leetcode_problem")
 
 leetcode_problem(
+    variants = [
+        "vertical_scanning",
+        "horizontal_scanning",
+        "min_max",
+        "trie",
+    ],
     extra_cc_deps = ["//common/tries"],
     extra_py_deps = ["//common"],
 )
