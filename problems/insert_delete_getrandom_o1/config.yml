@@ -6,12 +6,11 @@ problem:
   tags: ["Array / String"]
 
 solutions:
-  python: "problems/insert_delete_getrandom_o1/insert_delete_getrandom_o1.py"
-  cpp: "problems/insert_delete_getrandom_o1/insert_delete_getrandom_o1.cc"
-
-complexity:
-  time: "O(1)"
-  space: "O(n)"
+  - name: "Array & Hashmap"
+    python: "problems/insert_delete_getrandom_o1/insert_delete_getrandom_o1.py"
+    cpp: "problems/insert_delete_getrandom_o1/insert_delete_getrandom_o1.cc"
+    time: "O(1)"
+    space: "O(n)"
 
 notes: ""
 readme_link: ""

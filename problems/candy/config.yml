@@ -6,12 +6,11 @@ problem:
   tags: ["Array / String"]
 
 solutions:
-  python: "problems/candy/candy.py"
-  cpp: "problems/candy/candy.cc"
+  - name: "Greedy (Two Passes)"
+    python: "problems/candy/candy.py"
+    cpp: "problems/candy/candy.cc"
+    time: "O(n)"
+    space: "O(n)"
 
-complexity:
-  time: "O(n)"
-  space: "O(n)"
-
-notes: "We do it in two passes: one left to right and other right to left."
+notes: ""
 readme_link: ""

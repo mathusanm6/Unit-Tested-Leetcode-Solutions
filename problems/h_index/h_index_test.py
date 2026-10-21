@@ -1,7 +1,13 @@
 """Test cases for the hIndex function."""
 
+import importlib
+import os
+
 import pytest
-from h_index import hIndex
+
+_module_name = os.environ.get("LEETCODE_SOLUTION_MODULE", "h_index_sorting")
+_solution_mod = importlib.import_module(_module_name)
+hIndex = _solution_mod.hIndex
 
 
 @pytest.mark.parametrize(

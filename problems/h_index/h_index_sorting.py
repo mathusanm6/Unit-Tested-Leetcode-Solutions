@@ -1,7 +1,7 @@
 def hIndex(citations: list[int]) -> int:
     citations.sort()
     n = len(citations)
-    for i, v in enumerate(citations):
-        if n - i <= v:
+    for i, citation in enumerate(citations):
+        if n - i <= citation:
             return n - i
     return 0
