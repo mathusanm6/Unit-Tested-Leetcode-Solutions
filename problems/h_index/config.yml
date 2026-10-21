@@ -6,12 +6,16 @@ problem:
   tags: ["Array / String"]
 
 solutions:
-  python: "problems/h_index/h_index.py"
-  cpp: "problems/h_index/h_index.cc"
-
-complexity:
-  time: "O(n log n)"
-  space: "O(1)"
+  - name: "Sorting"
+    python: "problems/h_index/h_index_sorting.py"
+    cpp: "problems/h_index/h_index_sorting.cc"
+    time: "O(n log n)"
+    space: "O(1)"
+  - name: "Counting Sort"
+    python: "problems/h_index/h_index_counting_sort.py"
+    cpp: "problems/h_index/h_index_counting_sort.cc"
+    time: "O(n)"
+    space: "O(n)"
 
 notes: ""
 readme_link: ""

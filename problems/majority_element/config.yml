@@ -6,12 +6,11 @@ problem:
   tags: ["Array / String"]
 
 solutions:
-  python: "problems/majority_element/majority_element.py"
-  cpp: "problems/majority_element/majority_element.cc"
+  - name: "Boyer-Moore Majority Vote Algorithm"
+    python: "problems/majority_element/majority_element.py"
+    cpp: "problems/majority_element/majority_element.cc"
+    time: "O(n)"
+    space: "O(1)"
 
-complexity:
-  time: "O(n)"
-  space: "O(1)"
-
-notes: "Using Boyer-Moore Majority Vote Algorithm."
+notes: ""
 readme_link: ""

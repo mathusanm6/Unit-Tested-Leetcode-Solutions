@@ -1,38 +1,32 @@
 #include "reverse_words_in_a_string.h"
 
-#include <algorithm>
-#include <cstddef>
 #include <string>
 
 std::string reverseWords(std::string s) {
-    // Step 1: Clean spaces in-place
-    const std::size_t n = s.size();
-    std::size_t write = 0;
+    std::string result;
+    int i = static_cast<int>(s.length()) - 1;
 
-    for (std::size_t read = 0; read < n; ++read) {
-        if (s[read] != ' ') {
-            if (write > 0) {
-                s[write++] = ' ';  // Add single space between words
-            }
-            while (read < n && s[read] != ' ') {
-                s[write++] = s[read++];
-            }
+    while (i >= 0) {
+        // Skip spaces
+        while (i >= 0 && s[i] == ' ') {
+            i--;
         }
-    }
-    s.resize(write);  // Shrink to cleaned size
-
-    // Step 2: Reverse the whole string
-    std::ranges::reverse(s);
-
-    // Step 3: Reverse each word back
-    auto wordStart = s.begin();
-    for (auto it = s.begin(); it != s.end(); ++it) {
-        if (*it == ' ') {
-            std::ranges::reverse(wordStart, it);
-            wordStart = it + 1;
+        if (i < 0) {
+            break;
         }
-    }
-    std::ranges::reverse(wordStart, s.end());
 
-    return s;
+        // Find word boundary
+        const int j = i;
+        while (i >= 0 && s[i] != ' ') {
+            i--;
+        }
+
+        // Add delimiter and word
+        if (!result.empty()) {
+            result += ' ';
+        }
+        result.append(s, i + 1, j - i);
+    }
+
+    return result;
 }

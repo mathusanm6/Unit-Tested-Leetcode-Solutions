@@ -6,12 +6,11 @@ problem:
   tags: ["Array / String"]
 
 solutions:
-  python: "problems/product_of_array_except_self/product_of_array_except_self.py"
-  cpp: "problems/product_of_array_except_self/product_of_array_except_self.cc"
-
-complexity:
-  time: "O(n)"
-  space: "O(1)"
+  - name: "Prefix Sum"
+    python: "problems/product_of_array_except_self/product_of_array_except_self.py"
+    cpp: "problems/product_of_array_except_self/product_of_array_except_self.cc"
+    time: "O(n)"
+    space: "O(1)"
 
 notes: "We are using prefix sum's logic."
 readme_link: ""

@@ -1,4 +1,5 @@
 #include "h_index.h"
+
 #include <algorithm>
 #include <vector>
 
