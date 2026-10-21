@@ -6,12 +6,11 @@ problem:
   tags: ["Array / String"]
 
 solutions:
-  python: "problems/remove_element/remove_element.py"
-  cpp: "problems/remove_element/remove_element.cc"
-
-complexity:
-  time: "O(n)"
-  space: "O(1)"
+  - name: "Two Pointers"
+    python: "problems/remove_element/remove_element.py"
+    cpp: "problems/remove_element/remove_element.cc"
+    time: "O(n)"
+    space: "O(1)"
 
 notes: ""
 readme_link: ""

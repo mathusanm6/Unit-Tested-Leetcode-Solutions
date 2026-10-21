@@ -6,12 +6,11 @@ problem:
   tags: ["Array / String"]
 
 solutions:
-  python: "problems/remove_duplicates_from_sorted_array_ii/remove_duplicates_from_sorted_array_ii.py"
-  cpp: "problems/remove_duplicates_from_sorted_array_ii/remove_duplicates_from_sorted_array_ii.cc"
-
-complexity:
-  time: "O(n)"
-  space: "O(1)"
+  - name: "Two Pointers"
+    python: "problems/remove_duplicates_from_sorted_array_ii/remove_duplicates_from_sorted_array_ii.py"
+    cpp: "problems/remove_duplicates_from_sorted_array_ii/remove_duplicates_from_sorted_array_ii.cc"
+    time: "O(n)"
+    space: "O(1)"
 
 notes: ""
 readme_link: ""
