@@ -44,18 +44,8 @@ class PrefixTree {
         curr->is_end = true;
     }
 
-    std::string longest_common_prefix() {
-        std::string res = "";
-        TrieNode* curr = root_;
-
-        // Stop if there's branching OR if we reached the end of a word
-        while (curr->children.size() == 1 && !curr->is_end) {
-            auto it = curr->children.begin();
-            res += it->first;
-            curr = it->second;
-        }
-        return res;
-    }
+    TrieNode* get_root() { return root_; }
+    const TrieNode* get_root() const { return root_; }
 
    private:
     TrieNode* root_;

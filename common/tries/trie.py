@@ -18,13 +18,3 @@ class PrefixTree:
                 curr.children[c] = TrieNode()
             curr = curr.children[c]
         curr.is_end = True
-
-    def longest_common_prefix(self) -> str:
-        res = []
-        curr = self.root
-        # Stop if there's branching OR if we reached the end of a word
-        while len(curr.children) == 1 and not curr.is_end:
-            c = next(iter(curr.children))
-            res.append(c)
-            curr = curr.children[c]
-        return "".join(res)
