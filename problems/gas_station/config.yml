@@ -6,12 +6,11 @@ problem:
   tags: ["Array / String"]
 
 solutions:
-  python: "problems/gas_station/gas_station.py"
-  cpp: "problems/gas_station/gas_station.cc"
-
-complexity:
-  time: "O(n)"
-  space: "O(1)"
+  - name: "Greedy"
+    python: "problems/gas_station/gas_station_greedy.py"
+    cpp: "problems/gas_station/gas_station_greedy.cc"
+    time: "O(n)"
+    space: "O(1)"
 
 notes: ""
 readme_link: ""
