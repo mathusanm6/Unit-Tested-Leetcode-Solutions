@@ -6,12 +6,16 @@ problem:
   tags: ["Array / String"]
 
 solutions:
-  python: "problems/find_the_index_of_the_first_occurrence_in_a_string/find_the_index_of_the_first_occurrence_in_a_string.py"
-  cpp: "problems/find_the_index_of_the_first_occurrence_in_a_string/find_the_index_of_the_first_occurrence_in_a_string.cc"
-
-complexity:
-  time: "O(n * m)"
-  space: "O(1)"
+  - name: "Brute Force"
+    python: "problems/find_the_index_of_the_first_occurrence_in_a_string/find_the_index_of_the_first_occurrence_in_a_string_brute_force.py"
+    cpp: "problems/find_the_index_of_the_first_occurrence_in_a_string/find_the_index_of_the_first_occurrence_in_a_string_brute_force.cc"
+    time: "O(n * m)"
+    space: "O(1)"
+  - name: "Knuth-Morris-Pratt (KMP) Algorithm"
+    python: "problems/find_the_index_of_the_first_occurrence_in_a_string/find_the_index_of_the_first_occurrence_in_a_string_kmp.py"
+    cpp: "problems/find_the_index_of_the_first_occurrence_in_a_string/find_the_index_of_the_first_occurrence_in_a_string_kmp.cc"
+    time: "O(n + m)"
+    space: "O(m)"
 
 notes: ""
 readme_link: ""
