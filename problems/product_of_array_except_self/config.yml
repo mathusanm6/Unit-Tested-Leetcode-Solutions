@@ -12,5 +12,5 @@ solutions:
     time: "O(n)"
     space: "O(1)"
 
-notes: "We are using prefix sum's logic."
+notes: ""
 readme_link: ""

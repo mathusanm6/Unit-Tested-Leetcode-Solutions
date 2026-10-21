@@ -6,12 +6,12 @@ problem:
   tags: ["Array / String"]
 
 solutions:
-  python: "problems/reverse_words_in_a_string/reverse_words_in_a_string.py"
-  cpp: "problems/reverse_words_in_a_string/reverse_words_in_a_string.cc"
+  - name: "In-Place Reversal"
+    python: "problems/reverse_words_in_a_string/reverse_words_in_a_string_two_pointers.py"
+    cpp: "problems/reverse_words_in_a_string/reverse_words_in_a_string_two_pointers.cc"
+    time: "O(n)"
+    space: "O(1)"
+  
 
-complexity:
-  time: "O(n)"
-  space: "O(1)"
-
-notes: "For C++, space complexity is _O(1)_ auxiliary space by modifying the string in-place. For Python, space complexity is _O(n)_ due to splitting the string into words."
+notes: ""
 readme_link: ""
