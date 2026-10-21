@@ -1,7 +1,15 @@
 """Test cases for the trap function."""
 
+import importlib
+import os
+
 import pytest
-from trapping_rain_water import trap
+
+_module_name = os.environ.get(
+    "LEETCODE_SOLUTION_MODULE", "trapping_rain_water_two_pointers"
+)
+_solution_mod = importlib.import_module(_module_name)
+trap = _solution_mod.trap
 
 
 @pytest.mark.parametrize(
@@ -21,5 +29,5 @@ from trapping_rain_water import trap
         "two_elements",
     ],
 )
-def test_trap(height, expected):
+def test_trap(height: list[int], expected: int) -> None:
     assert trap(height) == expected
