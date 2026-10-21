@@ -6,12 +6,26 @@ problem:
   tags: ["Array / String"]
 
 solutions:
-  python: "problems/trapping_rain_water/trapping_rain_water.py"
-  cpp: "problems/trapping_rain_water/trapping_rain_water.cc"
-
-complexity:
-  time: "O(n)"
-  space: "O(1)"
+  - name: "Brute Force"
+    python: "problems/trapping_rain_water/trapping_rain_water_brute_force.py"
+    cpp: "problems/trapping_rain_water/trapping_rain_water_brute_force.cc"
+    time: "O(n^2)"
+    space: "O(1)"
+  - name: "Dynamic Programming"
+    python: "problems/trapping_rain_water/trapping_rain_water_dynamic_programming.py"
+    cpp: "problems/trapping_rain_water/trapping_rain_water_dynamic_programming.cc"
+    time: "O(n)"
+    space: "O(n)"
+  - name: "Monotonic Stack"
+    python: "problems/trapping_rain_water/trapping_rain_water_monotonic_stack.py"
+    cpp: "problems/trapping_rain_water/trapping_rain_water_monotonic_stack.cc"
+    time: "O(n)"
+    space: "O(n)"
+  - name: "Two Pointers"
+    python: "problems/trapping_rain_water/trapping_rain_water_two_pointers.py"
+    cpp: "problems/trapping_rain_water/trapping_rain_water_two_pointers.cc"
+    time: "O(n)"
+    space: "O(1)"
 
 notes: ""
 readme_link: ""

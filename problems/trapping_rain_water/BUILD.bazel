@@ -1,3 +1,10 @@
 load("//problems:defs.bzl", "leetcode_problem")
 
-leetcode_problem()
+leetcode_problem(
+    variants = [
+        "brute_force",
+        "dynamic_programming",
+        "monotonic_stack",
+        "two_pointers",
+    ],
+)
