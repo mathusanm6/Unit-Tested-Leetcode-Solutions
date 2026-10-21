@@ -6,12 +6,11 @@ problem:
   tags: ["Array / String"]
 
 solutions:
-  python: "problems/merge_sorted_array/merge_sorted_array.py"
-  cpp: "problems/merge_sorted_array/merge_sorted_array.cc"
-
-complexity:
-  time: "O(m + n)"
-  space: "O(1)"
+  - name: "Two Pointers"
+    python: "problems/merge_sorted_array/merge_sorted_array.py"
+    cpp: "problems/merge_sorted_array/merge_sorted_array.cc"
+    time: "O(m + n)"
+    space: "O(1)"
 
 notes: ""
 readme_link: ""
