@@ -6,12 +6,11 @@ problem:
   tags: ["Array / String"]
 
 solutions:
-  python: "problems/length_of_last_word/length_of_last_word.py"
-  cpp: "problems/length_of_last_word/length_of_last_word.cc"
+  - name: "String Traversal"
+    python: "problems/length_of_last_word/length_of_last_word.py"
+    cpp: "problems/length_of_last_word/length_of_last_word.cc"
+    time: "O(n)"
+    space: "O(1)"
 
-complexity:
-  time: "O(n)"
-  space: "O(1)"
-
-notes: "For C++, space complexity is _O(1)_ as we traverse the string in-place from the end. For Python, it is _O(n)_ due to splitting the string into words."
+notes: ""
 readme_link: ""
