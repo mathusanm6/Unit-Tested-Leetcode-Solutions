@@ -1,5 +1,5 @@
-#include "jump_game.h"
 #include <vector>
+#include "jump_game.h"
 
 bool canJump(std::vector<int> &nums) {
     const int n = static_cast<int>(nums.size());
