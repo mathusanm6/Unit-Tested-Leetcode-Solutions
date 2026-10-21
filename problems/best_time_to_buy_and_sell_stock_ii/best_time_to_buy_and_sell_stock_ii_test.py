@@ -1,7 +1,15 @@
 """Test cases for the maxProfit function."""
 
+import importlib
+import os
+
 import pytest
-from best_time_to_buy_and_sell_stock_ii import maxProfit
+
+_module_name = os.environ.get(
+    "LEETCODE_SOLUTION_MODULE", "best_time_to_buy_and_sell_stock_ii_dynamic_programming"
+)
+_solution_mod = importlib.import_module(_module_name)
+maxProfit = _solution_mod.maxProfit
 
 
 @pytest.mark.parametrize(
