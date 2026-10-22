@@ -6,12 +6,11 @@ problem:
   tags: ["Two Pointers"]
 
 solutions:
-  python: "problems/valid_palindrome/valid_palindrome.py"
-  cpp: "problems/valid_palindrome/valid_palindrome.cc"
-
-complexity:
-  time: "O(n)"
-  space: "O(1)"
+  - name: "Two Pointers"
+    python: "problems/valid_palindrome/valid_palindrome.py"
+    cpp: "problems/valid_palindrome/valid_palindrome.cc"
+    time: "O(n)"
+    space: "O(1)"
 
 notes: ""
 readme_link: ""

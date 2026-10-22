@@ -240,7 +240,7 @@ This repository covers a comprehensive range of algorithmic patterns and data st
 
 | # | Title | Difficulty | Approach | Solution | Time | Space | Note |
 |---|-------|------------|----------|----------|------|-------|------|
-| 125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | Easy | — | [Python](./problems/valid_palindrome/valid_palindrome.py), [C++](./problems/valid_palindrome/valid_palindrome.cc) | _O(n)_ | _O(1)_ |  |
+| 125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | Easy | Two Pointers | [Python](./problems/valid_palindrome/valid_palindrome.py), [C++](./problems/valid_palindrome/valid_palindrome.cc) | _O(n)_ | _O(1)_ |  |
 
 ## Hashmap
 
