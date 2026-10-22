@@ -1,0 +1,16 @@
+problem:
+  number: 11
+  title: "Container With Most Water"
+  leetcode_url: "https://leetcode.com/problems/container-with-most-water/"
+  difficulty: "medium"
+  tags: ["Two Pointers"]
+
+solutions:
+  - name: "Two Pointers"
+    python: "problems/container_with_most_water/container_with_most_water.py"
+    cpp: "problems/container_with_most_water/container_with_most_water.cc"
+    time: "O(n)"
+    space: "O(1)"
+
+notes: ""
+readme_link: ""
