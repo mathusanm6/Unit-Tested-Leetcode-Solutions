@@ -1,0 +1,16 @@
+problem:
+  number: 15
+  title: "3Sum"
+  leetcode_url: "https://leetcode.com/problems/3sum/"
+  difficulty: "medium"
+  tags: ["Two Pointers"]
+
+solutions:
+  - name: "Sorting & Two Pointers"
+    python: "problems/3sum/3sum.py"
+    cpp: "problems/3sum/3sum.cc"
+    time: "O(n^2)"
+    space: "O(1)"
+
+notes: "You have to avoid duplicates without using sets."
+readme_link: ""
