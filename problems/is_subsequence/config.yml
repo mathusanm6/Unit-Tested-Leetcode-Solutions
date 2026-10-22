@@ -1,0 +1,16 @@
+problem:
+  number: 392
+  title: "Is Subsequence"
+  leetcode_url: "https://leetcode.com/problems/is-subsequence/"
+  difficulty: "easy"
+  tags: ["Two Pointers"]
+
+solutions:
+  - name: "Two Pointers"
+    python: "problems/is_subsequence/is_subsequence.py"
+    cpp: "problems/is_subsequence/is_subsequence.cc"
+    time: "O(n)"
+    space: "O(1)"
+
+notes: ""
+readme_link: ""
