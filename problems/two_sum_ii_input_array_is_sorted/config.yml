@@ -1,0 +1,16 @@
+problem:
+  number: 167
+  title: "Two Sum II - Input Array Is Sorted"
+  leetcode_url: "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/"
+  difficulty: "medium"
+  tags: ["Two Pointers"]
+
+solutions:
+  - name: "Two Pointers"
+    python: "problems/two_sum_ii_input_array_is_sorted/two_sum_ii_input_array_is_sorted.py"
+    cpp: "problems/two_sum_ii_input_array_is_sorted/two_sum_ii_input_array_is_sorted.cc"
+    time: "O(n)"
+    space: "O(1)"
+
+notes: ""
+readme_link: ""
