@@ -1,172 +1,85 @@
-# Unit-Tested LeetCode Solutions
+# LeetCode Solutions
 
 <div align="center">
 
-### 🔬 Code Health & Testing
+### Code Quality & Testing
+[![C++](https://img.shields.io/github/actions/workflow/status/mathusanm6/LeetCode/cpp.yml?branch=main&label=C%2B%2B&logo=cplusplus&logoColor=white&style=flat-square)](https://github.com/mathusanm6/LeetCode/actions/workflows/cpp.yml)
+[![Python](https://img.shields.io/github/actions/workflow/status/mathusanm6/LeetCode/python.yml?branch=main&label=Python&logo=python&logoColor=white&style=flat-square)](https://github.com/mathusanm6/LeetCode/actions/workflows/python.yml)
 
-[![C++ Tests](https://img.shields.io/github/actions/workflow/status/mathusanm6/LeetCode/cpp-test.yml?branch=main&label=C%2B%2B%20Tests&logo=cplusplus&logoColor=white&style=for-the-badge&successColor=green&failureColor=red)](https://github.com/mathusanm6/LeetCode/actions/workflows/cpp-test.yml)
-[![Python Tests](https://img.shields.io/github/actions/workflow/status/mathusanm6/LeetCode/python-test.yml?branch=main&label=Python%20Tests&logo=python&logoColor=white&style=for-the-badge&successColor=green&failureColor=red)](https://github.com/mathusanm6/LeetCode/actions/workflows/python-test.yml)
+### Repository Stats
 
-### 🔍 Code Quality & Linting
-
-[![C++ Linter](https://img.shields.io/github/actions/workflow/status/mathusanm6/LeetCode/cpp-lint.yml?branch=main&label=C%2B%2B%20Linter&logo=cplusplus&logoColor=white&style=for-the-badge&successColor=green&failureColor=red)](https://github.com/mathusanm6/LeetCode/actions/workflows/cpp-lint.yml)
-[![Python Linter](https://img.shields.io/github/actions/workflow/status/mathusanm6/LeetCode/python-lint.yml?branch=main&label=Python%20Linter&logo=python&logoColor=white&style=for-the-badge&successColor=green&failureColor=red)](https://github.com/mathusanm6/LeetCode/actions/workflows/python-lint.yml)
-
-### 📊 Repository Stats
-
-[![Last Commit](https://img.shields.io/github/last-commit/mathusanm6/LeetCode?style=for-the-badge&logo=git&logoColor=white&color=blue)](https://github.com/mathusanm6/LeetCode/commits/main)
-[![C++ Solutions](https://img.shields.io/badge/C%2B%2B%20Solutions-32-blue?style=for-the-badge&logo=cplusplus&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
-[![Python Solutions](https://img.shields.io/badge/Python%20Solutions-32-blue?style=for-the-badge&logo=python&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
+[![C++ Solutions](https://img.shields.io/badge/C%2B%2B%20Solutions-32-blue?style=flat-square&logo=cplusplus&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
+[![Python Solutions](https://img.shields.io/badge/Python%20Solutions-32-blue?style=flat-square&logo=python&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)
 
 </div>
 
 ## Description
 
-This repository contains comprehensive, unit-tested solutions to LeetCode problems implemented in both **C++20** and **Python 3**. Each solution includes:
+LeetCode problem solutions implemented in C++20 and Python 3, hermetically built and tested with [Bazel](https://bazel.build).
 
-- 🧪 **Comprehensive test suites** with multiple test cases
-- 📝 **Detailed documentation** with complexity analysis
-- 🔧 **Automated code quality** checks and formatting
-- 🚀 **CI/CD pipeline** with automated testing and linting
+Each problem includes:
+- Multiple approaches (e.g. brute force, two-pointer, greedy, dynamic programming) with time and space complexity notes
+- Unit test coverage with GoogleTest (C++) and pytest (Python)
+- Shared data structure implementations in `common/` (e.g. `TreeNode`, `ListNode`)
 
-## 📁 Project Structure
+## Directory Layout
+
+Each problem lives in its own directory under `problems/`:
 
 ```
-├── problems/                    # Problem solutions organized by name
-│   ├── defs.bzl                 # Starlark macro for defining problem targets
-│   ├── two_sum/                 # Individual problem directories
-│   │   ├── BUILD.bazel          # Problem target definitions
-│   │   ├── config.yml           # Problem metadata and configuration
-│   │   ├── two_sum.py           # Python solution
-│   │   ├── two_sum.cc           # C++ solution
-│   │   ├── two_sum.h            # C++ header
-│   │   ├── two_sum_test.py      # Python unit tests
-│   │   └── two_sum_test.cc      # C++ unit tests
-│   └── ...
-├── common/                      # Shared data structures (e.g. TreeNode)
-├── config/                      # Global configuration files
-│   ├── difficulties.yml         # Difficulty level definitions
-│   └── tags.yml                 # Problem tag categories
-├── scripts/                     # Automation and utility scripts
-│   ├── format.sh                # Code formatting (C++ & Python)
-│   ├── lint.sh                  # Code linting (C++ & Python)
-│   ├── install_hooks.sh         # Git hooks installer
-│   ├── uninstall_hooks.sh       # Git hooks uninstaller
-│   ├── generate_readme.py       # Auto-generate README content
-│   ├── update_badges.py         # Update repository badges
-│   └── update_badges.sh         # Badge update automation
-├── tools/                       # Build tools & test runners
-├── .github/workflows/           # CI/CD automation
-│   ├── cpp-test.yml             # C++ Bazel testing
-│   ├── python-test.yml          # Python Bazel testing
-│   ├── cpp-lint.yml             # C++ clang-tidy and clang-format
-│   ├── python-lint.yml          # Python ruff lint and format
-│   └── pr-size-labeler.yml      # PR size labeling
-├── MODULE.bazel                 # External dependency management (Bzlmod)
-├── BUILD.bazel                  # Root package definition
-├── .bazelrc                     # Bazel compiler flags & options
-├── requirements.txt             # Python dependencies
-├── requirements_lock.txt        # Pinned dependencies for rules_python
-├── .clang-format                # C++ code formatting rules
-└── .clang-tidy                  # C++ linting configuration
+problems/<problem_name>/
+├── config.yml        # Metadata, difficulty, tags, and complexities
+├── BUILD.bazel       # Bazel targets
+├── <name>.cc         # C++ solution
+├── <name>.h          # C++ header
+├── <name>_test.cc    # GoogleTest suite
+├── <name>.py         # Python solution
+└── <name>_test.py    # pytest suite
 ```
 
-## 🛠️ Technologies & Tools
+## Testing
 
-### Languages & Standards
-
-- **C++**: C++20 with modern features and strict compiler warnings (`-std=c++20 -Wall -Wextra -Wpedantic`)
-- **Python**: Python 3.14 with type hints and modern syntax
-
-### Testing Frameworks
-
-- **C++**: Google Test (`googletest@1.18.0.bcr.1`) hermetically managed via Bazel Bzlmod
-- **Python**: pytest hermetically managed via `rules_python`
-
-### Code Quality Tools
-
-- **C++ Formatting**: `clang-format` for consistent code style
-- **C++ Linting**: `clang-tidy` for static analysis and best practices
-- **Python Formatting & Linting**: `ruff` for fast formatting and linting
-
-### Build & Automation
-
-- **Bazel**: Multi-language, hermetic build and test system with sandboxed execution and transitive caching
-- **GitHub Actions**: Automated CI/CD running native Bazel test targets
-
-## 🧪 Running Tests with Bazel
-
-All test targets run sandboxed and in parallel with action caching. No system installation of Google Test or CMake is required.
+All tests run hermetically through Bazel:
 
 ```bash
-# Run all tests (both C++ and Python) across the entire repo
+# Run all tests
 bazel test //problems/...
 
-# Run all tests for a specific problem (both languages)
+# Run all tests for a specific problem
 bazel test //problems/two_sum:test
 
-# Run only C++ tests
-bazel test //problems/two_sum:cc_test          # for a specific problem
-bazel test --test_tag_filters=cc //problems/... # for all problems
+# Run tests by language
+bazel test --test_tag_filters=cc //problems/...   # C++ (GoogleTest)
+bazel test --test_tag_filters=py //problems/...   # Python (pytest)
 
-# Run only Python tests
-bazel test //problems/two_sum:py_test          # for a specific problem
-bazel test --test_tag_filters=py //problems/... # for all problems
+# Run a single language target for a problem
+bazel test //problems/two_sum:cc_test
+bazel test //problems/two_sum:py_test
 ```
 
-## 🎨 Code Quality
+## Formatting & Linting
 
-This project maintains high code quality standards through automated tooling:
-
-### Formatting & Linting
+Formatting and linting use `clang-format` and `clang-tidy` for C++, and `ruff` for Python:
 
 ```bash
-# Format code (C++ with clang-format, Python with ruff)
-./scripts/format.sh          # format both
-./scripts/format.sh cpp      # format C++ only
-./scripts/format.sh py       # format Python only
+# Format code
+./scripts/format.sh          # both C++ and Python
+./scripts/format.sh cpp      # C++ only
+./scripts/format.sh py       # Python only
 
-# Lint code (C++ with clang-tidy, Python with ruff)
-./scripts/lint.sh            # lint both
-./scripts/lint.sh cpp        # lint C++ only
-./scripts/lint.sh py         # lint Python only
+# Lint code
+./scripts/lint.sh            # both C++ and Python
+./scripts/lint.sh cpp        # C++ only
+./scripts/lint.sh py         # Python only
 ```
 
-### Git Pre-Commit Hooks
-
-Install the pre-commit hook to automatically format, lint, update badges, and run tests before committing:
+Pre-commit hooks can be installed to format, lint, and run tests before committing:
 
 ```bash
 ./scripts/install_hooks.sh
 ```
 
-### Automation & Documentation
-
-```bash
-# Regenerate README from problem configurations
-bazel run //scripts:generate_readme
-
-# Update README badges with current solution counts
-bazel run //scripts:update_badges
-# or: ./scripts/update_badges.sh
-
-# Clean build artifacts
-bazel clean
-```
-
-### 🔄 Continuous Integration
-
-The GitHub Actions CI pipeline runs 4 focused workflows on both pull requests and pushes to `main`:
-
-- **⚡ C++ / Test** (`cpp-test.yml`): Parallel sandboxed GoogleTest execution via Bazel
-- **🐍 Python / Test** (`python-test.yml`): Parallel sandboxed pytest execution via Bazel
-- **🔍 C++ / Lint** (`cpp-lint.yml`): Static analysis (`clang-tidy`) and format enforcement (`clang-format`)
-- **🔍 Python / Lint** (`python-lint.yml`): Ruff linting and format enforcement
-
-
-## 🧮 Algorithms & Data Structures
-
-This repository covers a comprehensive range of algorithmic patterns and data structures commonly found in technical interviews:
+## Solutions
 
 - [Array / String](#array-/-string)
 - [Two Pointers](#two-pointers)

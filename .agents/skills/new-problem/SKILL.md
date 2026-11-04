@@ -147,7 +147,7 @@ git status
 
 Rules:
 - Check test parity: `<snake>_test.py` (`ids`) count equals `<snake>_test.cc` (`.test_name`) count.
-- **CI format check compliance**: GitHub Actions runs `./scripts/format.sh cpp` and `./scripts/format.sh py` and fails if `git diff --exit-code` is non-zero (`.github/workflows/cpp-lint.yml`, `.github/workflows/python-lint.yml`). Always ensure `./scripts/format.sh` runs on all modified files and any formatting changes are staged before committing.
+- **CI format check compliance**: GitHub Actions runs `./scripts/format.sh cpp` and `./scripts/format.sh py` and fails if `git diff --exit-code` is non-zero (`.github/workflows/cpp.yml`, `.github/workflows/python.yml`). Always ensure `./scripts/format.sh` runs on all modified files and any formatting changes are staged before committing.
 - Check `git diff README.md`: only the new problem row and badge counts should change.
 
 ## Step 6 - Report & Git Workflow

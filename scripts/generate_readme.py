@@ -247,17 +247,15 @@ class ReadmeGenerator:
         toc = self.generate_table_of_contents()
         problems_table = self.generate_problems_table()
 
-        # Find the algorithms section
-        start_marker = "## 🧮 Algorithms & Data Structures"
-
+        # Find the solutions section
+        start_marker = "## Solutions"
         start_idx = content.find(start_marker)
+        if start_idx == -1:
+            start_marker = "## 🧮 Algorithms & Data Structures"
+            start_idx = content.find(start_marker)
 
         if start_idx == -1:
-            print(
-                Colors.red(
-                    "✗ Could not find '🧮 Algorithms & Data Structures' section in README"
-                )
-            )
+            print(Colors.red("✗ Could not find '## Solutions' section in README"))
             return
 
         # Look for the end of the algorithms content
@@ -265,7 +263,7 @@ class ReadmeGenerator:
         # 1. The next top-level section that's NOT a tag section (## but not a tag name)
         # 2. End of file if no such section exists
 
-        # Start searching after the "## Algorithms" line
+        # Start searching after the section marker line
         search_start = start_idx + len(start_marker)
 
         # Find all "## " occurrences after the algorithms section
@@ -298,7 +296,7 @@ class ReadmeGenerator:
         content_after = content[end_idx:] if end_idx < len(content) else ""
 
         # Replace only the algorithms section
-        new_algorithms_section = f"## 🧮 Algorithms & Data Structures\n\nThis repository covers a comprehensive range of algorithmic patterns and data structures commonly found in technical interviews:\n\n{toc}\n\n{problems_table}"
+        new_algorithms_section = f"## Solutions\n\n{toc}\n\n{problems_table}"
 
         new_content = content[:start_idx] + new_algorithms_section + content_after
 
