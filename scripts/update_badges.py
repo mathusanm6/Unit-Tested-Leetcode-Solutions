@@ -55,8 +55,8 @@ def update_readme_badges(cpp_count, python_count):
         content = f.read()
 
     # Define the new badge lines
-    cpp_badge = f"[![C++ Solutions](https://img.shields.io/badge/C%2B%2B%20Solutions-{cpp_count}-blue?style=for-the-badge&logo=cplusplus&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)"
-    python_badge = f"[![Python Solutions](https://img.shields.io/badge/Python%20Solutions-{python_count}-blue?style=for-the-badge&logo=python&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)"
+    cpp_badge = f"[![C++ Solutions](https://img.shields.io/badge/C%2B%2B%20Solutions-{cpp_count}-blue?style=flat-square&logo=cplusplus&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)"
+    python_badge = f"[![Python Solutions](https://img.shields.io/badge/Python%20Solutions-{python_count}-blue?style=flat-square&logo=python&logoColor=white)](https://github.com/mathusanm6/LeetCode/tree/main/problems)"
 
     # Update C++ badge
     cpp_pattern = r"\[\!\[C\+\+ Solutions\].*?\)\]\(.*?\)"
